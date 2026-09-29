@@ -10,6 +10,8 @@
   const PROJECT = 'maripaz';
   const POLL_MS = 8000;
   const PUT_DEBOUNCE_MS = 400;
+  /* crudcrud rejects large ms epochs on PUT (HTTP 500); use seconds. */
+  function nowTs() { return Math.floor(Date.now() / 1000); }
 
   const el = {
     sections: document.getElementById('sections'),
@@ -60,7 +62,11 @@
       if (!parsed || typeof parsed !== 'object') return null;
       return {
         project: parsed.project || PROJECT,
-        updatedAt: Number(parsed.updatedAt) || 0,
+        updatedAt: (function () {
+          let u = Number(parsed.updatedAt) || 0;
+          if (u > 1e12) u = Math.floor(u / 1000);
+          return u;
+        })(),
         checked: parsed.checked && typeof parsed.checked === 'object' ? parsed.checked : {},
         notes: parsed.notes && typeof parsed.notes === 'object' ? parsed.notes : {},
       };
@@ -102,9 +108,12 @@
     if (!res.ok) throw new Error('GET ' + res.status);
     const data = await res.json();
     // crudcrud includes _id — ignore it
+    let updatedAt = Number(data.updatedAt) || 0;
+    // normalize legacy ms timestamps
+    if (updatedAt > 1e12) updatedAt = Math.floor(updatedAt / 1000);
     return {
       project: data.project || PROJECT,
-      updatedAt: Number(data.updatedAt) || 0,
+      updatedAt,
       checked: data.checked && typeof data.checked === 'object' ? data.checked : {},
       notes: data.notes && typeof data.notes === 'object' ? data.notes : {},
     };
@@ -412,7 +421,7 @@
     if (!it || it.na) return;
     if (state.checked[id]) delete state.checked[id];
     else state.checked[id] = true;
-    state.updatedAt = Date.now();
+    state.updatedAt = nowTs();
     state.project = PROJECT;
     saveLocal();
     refreshChecksOnly();
@@ -494,7 +503,7 @@
 
   async function boot() {
     try {
-      const res = await fetch('./data.json?v=20260929d', { cache: 'no-store' });
+      const res = await fetch('./data.json?v=20260929e', { cache: 'no-store' });
       DATA = await res.json();
     } catch (e) {
       el.sections.innerHTML = '<p class="panel">No se pudo cargar el checklist.</p>';
