@@ -191,6 +191,54 @@
     el.progressLabel.textContent = `${doneCount} de ${actionable} · progreso ponderado`;
   }
 
+
+  function formatRichText(s) {
+    // Preserve paragraphs; escape HTML; keep simple backticks as <code>
+    const esc = escapeHtml(s || '');
+    return esc
+      .split(/\n\n+/)
+      .map((para) => `<p>${para.replace(/\n/g, '<br>').replace(/`([^`]+)`/g, '<code>$1</code>')}</p>`)
+      .join('');
+  }
+
+  function buildDetailHtml(it) {
+    const parts = [];
+    const rich = it.description_rich || it.description || '';
+    parts.push(`<div class="detail-block"><div class="detail-label">Cómo</div><div class="detail-body">${formatRichText(rich)}</div></div>`);
+
+    if (it.steps && it.steps.length) {
+      const lis = it.steps.map((s) => `<li>${escapeHtml(s)}</li>`).join('');
+      parts.push(`<div class="detail-block"><div class="detail-label">Pasos</div><ol class="detail-steps">${lis}</ol></div>`);
+    }
+
+    if (it.done_when) {
+      parts.push(`<div class="detail-block detail-done"><div class="detail-label">Listo cuando</div><div class="detail-body">${escapeHtml(it.done_when)}</div></div>`);
+    }
+
+    const actors = it.actors && it.actors.length ? it.actors : (it.tags || []);
+    if (actors.length) {
+      const chips = actors.map((a) => `<span class="tag tag-${escapeHtml(a)}">[${escapeHtml(a)}]</span>`).join(' ');
+      parts.push(`<div class="detail-block"><div class="detail-label">Quién</div><div class="detail-body detail-actors">${chips}</div></div>`);
+    }
+
+    if (it.na && it.na_reason) {
+      parts.push(`<div class="detail-block detail-na"><div class="detail-label">Por qué N/A</div><div class="detail-body">${escapeHtml(it.na_reason)}</div></div>`);
+    }
+    if (it.placeholder && it.placeholder_note) {
+      parts.push(`<div class="detail-block detail-ph"><div class="detail-label">PLACEHOLDER</div><div class="detail-body">${escapeHtml(it.placeholder_note)}</div></div>`);
+    }
+
+    const weightNote = it.na || !(Number(it.weight_pct) > 0)
+      ? 'Peso: 0 % (N/A — no cuenta en el progreso).'
+      : `Peso: ${Number(it.weight_pct).toFixed(1)} % del proyecto${it.effort_band ? ' · ' + it.effort_band : ''}.`;
+    parts.push(`<div class="detail-meta">${escapeHtml(weightNote)}</div>`);
+
+    if (it.cites && it.cites.length) {
+      parts.push(`<div class="cites">${it.cites.map((c) => `<span class="tag tag-cite">(${escapeHtml(c)})</span>`).join('')}</div>`);
+    }
+    return parts.join('');
+  }
+
   function escapeHtml(s) {
     return String(s)
       .replace(/&/g, '&amp;')
@@ -314,18 +362,7 @@
 
         const detail = document.createElement('div');
         detail.className = 'item-detail';
-        const weightNote = it.na
-          ? 'Peso: 0 % (N/A — no cuenta en el progreso).'
-          : `Peso: ${Number(it.weight_pct).toFixed(1)} % del proyecto${it.effort_band ? ' · ' + it.effort_band : ''}.`;
-        let cites = '';
-        if (it.cites && it.cites.length) {
-          cites = `<div class="cites">${it.cites.map((c) => `<span class="tag tag-cite">(${escapeHtml(c)})</span>`).join('')}</div>`;
-        }
-        detail.innerHTML = `
-          <div>${escapeHtml(it.description || '')}</div>
-          <div style="margin-top:.45rem;font-size:.82rem;color:var(--muted)">${escapeHtml(weightNote)}</div>
-          ${cites}
-        `;
+        detail.innerHTML = buildDetailHtml(it);
 
         item.appendChild(check);
         item.appendChild(main);
@@ -463,7 +500,7 @@
 
   async function boot() {
     try {
-      const res = await fetch('./data.json', { cache: 'no-store' });
+      const res = await fetch('./data.json?v=20260929b', { cache: 'no-store' });
       DATA = await res.json();
     } catch (e) {
       el.sections.innerHTML = '<p class="panel">No se pudo cargar el checklist.</p>';
