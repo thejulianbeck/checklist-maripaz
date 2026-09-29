@@ -1,8 +1,8 @@
 {
   "project": "Maripaz Navidad",
-  "version": "1.0",
+  "version": "1.1",
   "updated": "2026-09-29",
-  "marketplace": "Amazon.es",
+  "marketplace": "Amazon.com (vivo) · Amazon.es (meta editorial, sin ficha aún)",
   "items": [
     {
       "order": 1,
@@ -36,15 +36,15 @@
         "HUMANO"
       ],
       "depends_on": [],
-      "description_short": "Abrir el short link y anotar la URL .es real (puede resolver a .com).",
-      "description_rich": "El enlace corto dado es https://a.co/d/0aStQbDp. Puede redirigir a Amazon.com en lugar de Amazon.es. Alguien de la familia (cuenta/navegador) debe abrirlo, forzar o buscar el listing en Amazon.es y copiar la URL canónica .es del título *Maripaz y la Navidad que Casi Desaparece*.\n\nAnotar esa URL en FICHA-Maripaz.md (campo «URL Amazon.es confirmaa»). No hace falta scrape ni tools externos: solo el navegador y la ficha.",
+      "description_short": "Hecho: no hay ficha en Amazon.es; el libro vivo está solo en Amazon.com.",
+      "description_rich": "Resultado canónico (2026-09-29): **no existe listing de producto en Amazon.es**. El short link https://a.co/d/0aStQbDp resuelve al listing vivo en **Amazon.com**. En la consola KDP puede haber precios de territorio .es (auto desde .com); eso **no** equivale a una ficha visible en amazon.es.\n\nNo inventes URL .es, BSR .es ni que ya se venda en España. Marca este ítem, anota el resultado en FICHA-Maripaz.md y sigue el checklist sin bloquearte. La meta editorial de familia (.es) se atiende más adelante con el ítem de abrir/publicar ficha en Amazon.es.",
       "steps": [
-        "Abrir https://a.co/d/0aStQbDp en el navegador.",
-        "Confirmar o localizar el mismo libro en Amazon.es (marketplace prioritario).",
-        "Copiar la URL .es completa del listing.",
-        "Pegarla en FICHA-Maripaz.md y sustituir el «pendiente»."
+        "Abrir https://a.co/d/0aStQbDp y confirmar que el listing vivo es Amazon.com.",
+        "Comprobar (búsqueda / cuenta familiar) que no hay ficha de producto en Amazon.es.",
+        "Anotar en FICHA-Maripaz.md: «No existe listing en Amazon.es; solo Amazon.com».",
+        "Marcar este ítem y no bloquear el resto del checklist."
       ],
-      "done_when": "URL Amazon.es real anotaa en la ficha; short link contrastao.",
+      "done_when": "Queda documentado que no hay ficha en Amazon.es; listing vivo solo en Amazon.com (https://a.co/d/0aStQbDp).",
       "na_reason": null,
       "placeholder_note": null
     },
@@ -58,15 +58,15 @@
         "HUMANO"
       ],
       "depends_on": [],
-      "description_short": "Anotar precios Kindle y paperback en Amazon.es (EUR) y, si aplica, otros marketplaces.",
-      "description_rich": "Hoy los precios están marcaos como **pendiente** en la ficha. Abre el listing en Amazon.es (tras confirmar la URL) y anota el precio visible de Kindle y de tapa blanda en EUR. Si veis el libro en otros marketplaces, anotarlos aparte sin inventar números.\n\nTapa dura aún no existe: déjala como N/A. No uséis BookBeam ni herramientas de estimación: solo el precio que muestra Amazon al comprador.",
+      "description_short": "Hecho: documentar precios .com (+ territorio KDP .es si aparece). No exijas precios de una ficha .es inexistente.",
+      "description_rich": "Criterio actualizado: anota los precios del **marketplace vivo (Amazon.com)** y, si la consola KDP los muestra, los de territorio .es. **No** hace falta (ni es posible) sacar precios de una ficha de producto en amazon.es — esa ficha no existe aún.\n\nValores canónicos (2026-09-29):\n• Kindle: Amazon.com **9.99 USD**; territorio KDP .es **8.79 EUR**\n• Tapa blanda: Amazon.com **14.99 USD**; territorio KDP .es **13,21 EUR** (+ IVA ES ≈ 13,74)\n• Tapa dura: N/A (aún no publicada)\n\nEsos precios de territorio .es viven en la consola KDP; no inventes URL .es ni BSR de España.",
       "steps": [
-        "Abrir el listing .es confirmao.",
-        "Anotar precio Kindle (EUR) y precio paperback (EUR) en la tabla de precios de la ficha.",
-        "Si aplica, anotar precios en otros marketplaces en la columna correspondiente.",
-        "Dejar tapa dura como N/A hasta publicarla."
+        "Confirmar precios .com en el listing vivo (o en capturas/consola KDP).",
+        "Si KDP muestra territorio .es, anotar esos EUR aparte (no como «ficha amazon.es»).",
+        "Escribir la tabla de precios en FICHA-Maripaz.md (Kindle + paperback; tapa dura N/A).",
+        "Marcar este ítem; no bloquear el checklist por falta de URL .es."
       ],
-      "done_when": "Precios actuales Kindle + paperback (EUR .es como mínimo) escritos en FICHA-Maripaz.md.",
+      "done_when": "Precios .com documentados (Kindle 9.99 USD, paperback 14.99 USD) y territorio KDP .es si aplica (8.79 / 13,21 EUR); sin exigir ficha amazon.es.",
       "na_reason": null,
       "placeholder_note": null
     },
@@ -360,7 +360,7 @@
     {
       "order": 20,
       "id": "explorar-amazon-es-comps",
-      "title": "Explorar Amazon.es nativo (comps del nicho)",
+      "title": "Explorar Amazon.es como mercado meta (comps)",
       "section": "3.1",
       "effort_band": "medio",
       "actors": [
@@ -369,14 +369,14 @@
       "depends_on": [
         "fijar-terreno-libro"
       ],
-      "description_short": "Más vendidos Navidad infantil cristiana / valores; anotar temas, no copiar títulos.",
-      "description_rich": "En Amazon.es, explora más vendidos y búsquedas del nicho (Navidad infantil cristiana / valores / familia). Anota temas, ángulos y promesas que se repiten. **No copies títulos ni textos.** Guarda notas en la carpeta del proyecto. Esto alimenta la lista de 5–8 comps.",
+      "description_short": "Usar amazon.es para estudiar el mercado destino; auditar el propio libro en amazon.com.",
+      "description_rich": "Amazon.es es el **mercado meta** (comps y Browse), no el listing propio de Maripaz hoy. Explora más vendidos y búsquedas del nicho (Navidad infantil cristiana / valores / familia) en amazon.es para estudiar el destino. **Audita el propio libro en Amazon.com** (ASINs B0DQV69S13 tapa blanda / B0DRCZL8XW Kindle). **No copies títulos ni textos.** Guarda notas en la carpeta del proyecto. Esto alimenta la lista de 5–8 comps.",
       "steps": [
-        "Navegar Amazon.es en el nicho (humano; sin scrapers).",
-        "Anotar temas/ángulos en un doc de notas del proyecto.",
-        "Evitar copiar títulos o descripciones literales."
+        "Navegar amazon.es en el nicho como mercado meta (humano; sin scrapers).",
+        "Auditar el listing propio en amazon.com (ASINs B0DQV69S13 / B0DRCZL8XW).",
+        "Anotar temas/ángulos en un doc de notas del proyecto (sin copiar textos)."
       ],
-      "done_when": "Notas de exploración .es con temas del nicho (sin textos copiados).",
+      "done_when": "Notas de comps en .es (mercado meta) + auditoría del propio listing en .com.",
       "na_reason": null,
       "placeholder_note": null
     },
@@ -467,14 +467,14 @@
         "activar-bookbeam",
         "plan-busquedas-bookbeam"
       ],
-      "description_short": "Tendencia de las 3 categorías Kindle del intake (no solo foto BSR).",
-      "description_rich": "Con cupo BookBeam, Julián corre Category History sobre las rutas actuales del intake: (1) eBooks para Niños › Religión › Cristianismo › Inspiradores; (2) … › Navidad › Ficción; (3) … › Ficción › Cristiana. Anota tendencia estacional (Navidad) y señales de demanda **sin inventar BSR de Maripaz**.",
+      "description_short": "Tendencia de las 3 categorías Kindle del intake (pueden ser rutas .com); no asumas historial .es del propio ASIN.",
+      "description_rich": "Con cupo BookBeam, Julián corre Category History sobre las rutas Kindle del intake: (1) eBooks para Niños › Religión › Cristianismo › Inspiradores; (2) … › Navidad › Ficción; (3) … › Ficción › Cristiana. Esas rutas pueden corresponder al listing **.com** actual. **No asumas** Category History ni BSR de una ficha .es propia (aún no existe). Anota tendencia estacional (Navidad) y señales de demanda **sin inventar métricas de Maripaz**.",
       "steps": [
-        "Ejecutar Category History en BookBeam (Julián / cupo).",
-        "Capturar o anotar hallazgos en notas S1 del proyecto.",
-        "No inventar métricas del propio título."
+        "Ejecutar Category History en BookBeam sobre las rutas del intake (Julián / cupo).",
+        "Tratar las rutas como del marketplace vivo (.com) si no hay ficha .es propia.",
+        "Capturar hallazgos en notas S1; no inventar BSR/historial .es del propio ASIN."
       ],
-      "done_when": "Notas de Category History de las 3 rutas Kindle guardaas.",
+      "done_when": "Notas de Category History de las 3 rutas Kindle guardadas (sin asumir historial .es propio).",
       "na_reason": null,
       "placeholder_note": null
     },
@@ -1229,7 +1229,7 @@
     {
       "order": 57,
       "id": "categorias-kdp-es",
-      "title": "Categorías KDP .es",
+      "title": "Categorías KDP (.com ahora + plan .es)",
       "section": "5.4",
       "effort_band": "medio",
       "actors": [
@@ -1238,14 +1238,14 @@
       "depends_on": [
         "category-history"
       ],
-      "description_short": "Validar las 3 rutas Kindle del intake y alinear print; elegir las que enseñe el curso / consola.",
-      "description_rich": "Valida en KDP .es las 3 rutas Kindle del intake y alinear categorías de print. Intake actual: Inspiradores; Navidad › Ficción; Ficción › Cristiana. Humano elige según curso/consola; anotar si print coincide.",
+      "description_short": "Validar categorías para el marketplace vivo (.com) y dejar plan para cuando abra .es.",
+      "description_rich": "Valida en KDP las categorías del **marketplace vivo (Amazon.com)** — Kindle + print — partiendo de las 3 rutas del intake (Inspiradores; Navidad › Ficción; Ficción › Cristiana). Anota también un **plan** de categorías para cuando se abra/publique la ficha en Amazon.es (meta editorial). Humano elige según curso/consola; no inventes que ya hay browse .es propio.",
       "steps": [
-        "Abrir categorías en KDP (cuenta papá).",
-        "Validar/ajustar Kindle + print.",
-        "Anotar rutas finales en ficha."
+        "Abrir categorías en KDP (cuenta papá) para el título vivo en .com.",
+        "Validar/ajustar Kindle + print en el marketplace actual.",
+        "Anotar rutas finales .com y un plan provisional para .es cuando abra la ficha."
       ],
-      "done_when": "Categorías Kindle + print validadas y anotaas en ficha.",
+      "done_when": "Categorías .com validadas en ficha + plan anotado para .es (sin fingir ficha .es viva).",
       "na_reason": null,
       "placeholder_note": null
     },
@@ -1542,7 +1542,7 @@
     {
       "order": 71,
       "id": "crear-editar-titulo-kdp",
-      "title": "Crear/editar título en KDP (.es)",
+      "title": "Crear/editar título en KDP (marketplace vivo .com)",
       "section": "7",
       "effort_band": "medio",
       "actors": [
@@ -1552,14 +1552,14 @@
         "registrar-decision",
         "qa-empaque"
       ],
-      "description_short": "Cuenta del papá; metadatos alineados al empaque S2 y a la decisión A/B/C.",
-      "description_rich": "En KDP (cuenta del papá), crear o editar el título según decisión A/B/C. Metadatos alineados a S2 (título eligeo, autor Maripaz Becerra, idioma español, marketplace .es). El bot no publica ni entra a la cuenta.",
+      "description_short": "Cuenta del papá; metadatos alineados a S2 y A/B/C en .com; anotar expansión/publicación a .es.",
+      "description_rich": "En KDP (cuenta del papá), crear o editar el título según decisión A/B/C en el **marketplace vivo: Amazon.com**. Metadatos alineados a S2 (título elegido, autor Maripaz Becerra, idioma español). Anota en la ficha que la **expansión / publicación a Amazon.es** queda pendiente (ítem aparte). El bot no publica ni entra a la cuenta.",
       "steps": [
         "Abrir KDP con cuenta del papá.",
-        "Crear/editar según A, B o C.",
-        "Cargar metadatos S2."
+        "Crear/editar según A, B o C en el marketplace vivo (.com).",
+        "Cargar metadatos S2 y dejar nota de expansión a .es pendiente."
       ],
-      "done_when": "Título en KDP creado/editado con metadatos S2 alineados a A/B/C.",
+      "done_when": "Título en KDP creado/editado para .com con metadatos S2; expansión .es anotada como pendiente.",
       "na_reason": null,
       "placeholder_note": null
     },
@@ -1663,7 +1663,7 @@
     {
       "order": 76,
       "id": "precio-amazon-es",
-      "title": "Precio Amazon.es (EUR)",
+      "title": "Precio marketplace vivo (.com USD)",
       "section": "7",
       "effort_band": "medio",
       "actors": [
@@ -1673,14 +1673,15 @@
         "anotar-precios-actuales",
         "publicar-tres-formatos"
       ],
-      "description_short": "Fijar anclaje con calculadora de regalías; dato de precio actual aún pendiente.",
-      "description_rich": "Con la calculadora de regalías KDP, fija precios EUR en Amazon.es para los tres formatos según anclaje. Primero debes haber anotao precios actuales (snapshot). No inventes márgenes de ads aún (PLACEHOLDER). Anota los precios finales en la ficha.",
+      "description_short": "Fijar anclaje en .com (USD); EUR .es = territorio KDP o futura ficha .es. No bloquees por ficha .es.",
+      "description_rich": "Con la calculadora de regalías KDP, fija el anclaje de precios en el **marketplace vivo (Amazon.com, USD)** para los tres formatos. Los EUR de territorio .es en consola KDP (hoy ~8.79 Kindle / ~13,21 paperback) o de una **futura** ficha amazon.es se anotan aparte; **no bloquees** este ítem por no existir listing .es. Partir de los precios ya documentados en el snapshot. No inventes márgenes de ads aún (PLACEHOLDER). Actualiza la ficha.",
       "steps": [
         "Usar calculadora de regalías KDP.",
-        "Fijar precios EUR .es por formato.",
+        "Fijar precios USD .com por formato (anclaje vivo).",
+        "Anotar EUR de territorio KDP .es o futura ficha .es sin bloquear el ítem.",
         "Actualizar tabla de precios en FICHA-Maripaz.md."
       ],
-      "done_when": "Precios EUR .es fijaos en KDP y anotaos en ficha.",
+      "done_when": "Precios .com (USD) fijados en KDP y anotados; EUR territorio/.es futuro documentado sin bloquear.",
       "na_reason": null,
       "placeholder_note": null
     },
@@ -1735,6 +1736,33 @@
     },
     {
       "order": 79,
+      "id": "abrir-publicar-amazon-es",
+      "title": "Abrir / publicar Maripaz en Amazon.es (ficha de producto)",
+      "section": "7",
+      "effort_band": "lento",
+      "actors": [
+        "HUMANO"
+      ],
+      "depends_on": [
+        "registrar-decision",
+        "crear-editar-titulo-kdp",
+        "publicar-tres-formatos",
+        "enviar-revision-publicar"
+      ],
+      "description_short": "Publicar la ficha de producto en Amazon.es (expansión). Hasta entonces no fingir que existe.",
+      "description_rich": "Acción de **expansión**: abrir / publicar la ficha de producto de Maripaz en **Amazon.es**. Hazlo **después** de la decisión A/B/C, el empaque S2 y tener el título/formatos listos en KDP para el marketplace vivo (.com). Hasta completar este ítem, **no digas** que hay listing .es, URL .es ni BSR en España. Documenta la URL .es real en la ficha cuando exista.",
+      "steps": [
+        "Confirmar decisión A/B/C y empaque listos.",
+        "En KDP (cuenta papá), publicar / habilitar la ficha de producto en Amazon.es.",
+        "Verificar que la ficha sea visible en amazon.es (no solo territorio de precio).",
+        "Anotar la URL .es canónica y ASINs/visibilidad en FICHA-Maripaz.md."
+      ],
+      "done_when": "Ficha de producto visible en Amazon.es; URL .es real anotada en la ficha.",
+      "na_reason": null,
+      "placeholder_note": null
+    },
+    {
+      "order": 80,
       "id": "author-central-perfil",
       "title": "Author Central (perfil Maripaz Becerra)",
       "section": "7",
@@ -1757,7 +1785,7 @@
       "placeholder_note": null
     },
     {
-      "order": 80,
+      "order": 81,
       "id": "ph-calendario-navidad-2026",
       "title": "PLACEHOLDER · Calendario Navidad 2026",
       "section": "8",
@@ -1774,7 +1802,7 @@
       "placeholder_note": "Locked: sin SOP de calendario de lanzamiento capacitado aún. Solo recordatorio de ventana Navidad 2026; no inventar fechas de campaña."
     },
     {
-      "order": 81,
+      "order": 82,
       "id": "ph-amazon-ads",
       "title": "PLACEHOLDER · Amazon Ads",
       "section": "8",
@@ -1791,7 +1819,7 @@
       "placeholder_note": "Locked / pendiente capacitación S4+: no inventar SOPs de Amazon Ads ni métricas."
     },
     {
-      "order": 82,
+      "order": 83,
       "id": "ph-resenas-early",
       "title": "PLACEHOLDER · Reseñas early (éticas)",
       "section": "8",
@@ -1808,7 +1836,7 @@
       "placeholder_note": "Locked: pendiente módulo de reseñas éticas; hoy 0 reseñas; no inventar métodos."
     },
     {
-      "order": 83,
+      "order": 84,
       "id": "ph-a-plus-content",
       "title": "PLACEHOLDER · A+ Content",
       "section": "8",
@@ -1825,7 +1853,7 @@
       "placeholder_note": "Locked: A+ Content pendiente de detalle de curso; no inventar plantillas."
     },
     {
-      "order": 84,
+      "order": 85,
       "id": "ph-email-lista-acelerador",
       "title": "PLACEHOLDER · Email / lista / Acelerador",
       "section": "8",
@@ -1842,7 +1870,7 @@
       "placeholder_note": "Acelerador locked: no inventar lead magnet ni métricas de lista."
     },
     {
-      "order": 85,
+      "order": 86,
       "id": "ficha-actualizada",
       "title": "Ficha actualizada",
       "section": "9",
@@ -1866,7 +1894,7 @@
       "placeholder_note": null
     },
     {
-      "order": 86,
+      "order": 87,
       "id": "checklist-archivado",
       "title": "Checklist archivado",
       "section": "9",
@@ -1886,7 +1914,7 @@
       "placeholder_note": null
     },
     {
-      "order": 87,
+      "order": 88,
       "id": "lecciones-aprendidas",
       "title": "Lecciones aprendidas (≤5 bullets)",
       "section": "9",
@@ -1909,7 +1937,7 @@
       "placeholder_note": null
     },
     {
-      "order": 88,
+      "order": 89,
       "id": "no-abrir-charlotte",
       "title": "No abrir Charlotte hasta cerrar este",
       "section": "9",
@@ -1929,7 +1957,7 @@
       "placeholder_note": null
     },
     {
-      "order": 89,
+      "order": 90,
       "id": "duplicar-pipeline-siguiente",
       "title": "Duplicar pipeline para el siguiente",
       "section": "9",

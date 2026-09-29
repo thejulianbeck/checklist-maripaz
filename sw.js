@@ -1,6 +1,6 @@
 /* Service worker — Maripaz checklist PWA
    Caches shell for offline; network for sync API stays online-only. */
-const CACHE = 'maripaz-checklist-v6';
+const CACHE = 'maripaz-checklist-v7';
 const SHELL = [
   './',
   './index.html',

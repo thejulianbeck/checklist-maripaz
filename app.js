@@ -510,19 +510,51 @@
     });
   }
 
+
+  function applyDefaultChecked() {
+    // Seed defaults only for ids never present in checked (fresh install / empty remote).
+    // Once a key exists (true or later deleted by user after sync), we do not re-force it here;
+    // Firebase / local state owns ongoing toggles. We only fill missing keys when the map is empty
+    // OR when the id is absent and remote had no opinion yet on first paint after empty sync.
+    let changed = false;
+    const checkedEmpty = !state.checked || Object.keys(state.checked).length === 0;
+    for (const it of allItems()) {
+      if (!it.defaultChecked || it.na) continue;
+      if (state.checked[it.id]) continue;
+      if (!(it.id in (state.checked || {}))) {
+        // If map already has other checks, still seed missing defaultChecked ids once
+        // unless user explicitly had remote state without them (then remote wins via sync).
+        if (checkedEmpty || !state._defaultsApplied) {
+          state.checked[it.id] = true;
+          changed = true;
+        }
+      }
+    }
+    if (changed) {
+      state._defaultsApplied = true;
+      state.updatedAt = Math.max(Number(state.updatedAt) || 0, nowTs());
+      state.project = PROJECT;
+      saveLocal();
+      schedulePut();
+    } else {
+      state._defaultsApplied = true;
+    }
+  }
+
   async function boot() {
     try {
-      const res = await fetch('./data.json?v=20260929f', { cache: 'no-store' });
+      const res = await fetch('./data.json?v=20260929g', { cache: 'no-store' });
       DATA = await res.json();
     } catch (e) {
-      el.sections.innerHTML = '<p class="panel">No se pudo cargar el checklist.</p>';
+      el.sections.innerHTML = '<p class="footer-note">No se pudo cargar el checklist.</p>';
       return;
     }
     const n = allItems().length;
-    if (n !== 89) {
-      console.warn('Expected 89 items, got', n);
+    if (n !== 90) {
+      console.warn('Expected 90 items, got', n);
     }
     await initialSync();
+    applyDefaultChecked();
     render();
     startPolling();
     registerSW();

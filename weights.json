@@ -1,7 +1,7 @@
 {
   "project": "Editorial KDP",
   "title": "Maripaz y la Navidad que Casi Desaparece",
-  "version": "1.0",
+  "version": "1.1",
   "date": "2026-09-29",
   "source_checklist": "CHECKLIST-Maripaz.md",
   "sum_weight_pct": 100.0,
@@ -9,7 +9,7 @@
   "effort_band_counts": {
     "rapido": 20,
     "medio": 35,
-    "lento": 19,
+    "lento": 20,
     "na": 10,
     "placeholder": 5
   },
@@ -245,7 +245,7 @@
       "id": "explorar-amazon-es-comps",
       "section": "3.1",
       "order": 20,
-      "title": "Explorar Amazon.es nativo (comps del nicho)",
+      "title": "Explorar Amazon.es como mercado meta (comps)",
       "weight_pct": 1.5,
       "effort_band": "medio",
       "notes": "Browsing comps Navidad infantil cristiana.",
@@ -711,7 +711,7 @@
       "id": "categorias-kdp-es",
       "section": "5.4",
       "order": 57,
-      "title": "Categorías KDP .es",
+      "title": "Categorías KDP (.com ahora + plan .es)",
       "weight_pct": 1.2,
       "effort_band": "medio",
       "notes": "Validar 3 rutas Kindle + print.",
@@ -877,7 +877,7 @@
       "id": "crear-editar-titulo-kdp",
       "section": "7",
       "order": 71,
-      "title": "Crear/editar título en KDP (.es)",
+      "title": "Crear/editar título en KDP (marketplace vivo .com)",
       "weight_pct": 1.4,
       "effort_band": "medio",
       "notes": "Metadatos alineados a S2 y A/B/C.",
@@ -914,7 +914,7 @@
       "section": "7",
       "order": 74,
       "title": "Publicar / añadir los tres formatos",
-      "weight_pct": 3.0,
+      "weight_pct": 2.0,
       "effort_band": "lento",
       "notes": "Kindle + paperback + hardcover con anclaje.",
       "tags": [
@@ -937,7 +937,7 @@
       "id": "precio-amazon-es",
       "section": "7",
       "order": 76,
-      "title": "Precio Amazon.es (EUR)",
+      "title": "Precio marketplace vivo (.com USD)",
       "weight_pct": 1.2,
       "effort_band": "medio",
       "notes": "Anclaje con calculadora de regalías.",
@@ -962,7 +962,7 @@
       "section": "7",
       "order": 78,
       "title": "Enviar a revisión / publicar",
-      "weight_pct": 1.5,
+      "weight_pct": 1.0,
       "effort_band": "lento",
       "notes": "Gate final humano; anotar ASINs.",
       "tags": [
@@ -970,9 +970,21 @@
       ]
     },
     {
-      "id": "author-central-perfil",
+      "id": "abrir-publicar-amazon-es",
       "section": "7",
       "order": 79,
+      "title": "Abrir / publicar Maripaz en Amazon.es (ficha de producto)",
+      "weight_pct": 1.5,
+      "effort_band": "lento",
+      "notes": "Abrir ficha de producto en Amazon.es (expansión); redistribuido desde publicar formatos + enviar revisión.",
+      "tags": [
+        "HUMANO"
+      ]
+    },
+    {
+      "id": "author-central-perfil",
+      "section": "7",
+      "order": 80,
       "title": "Author Central (perfil Maripaz Becerra)",
       "weight_pct": 0.3,
       "effort_band": "rapido",
@@ -984,7 +996,7 @@
     {
       "id": "ph-calendario-navidad-2026",
       "section": "8",
-      "order": 80,
+      "order": 81,
       "title": "PLACEHOLDER · Calendario Navidad 2026",
       "weight_pct": 0.8,
       "effort_band": "placeholder",
@@ -997,7 +1009,7 @@
     {
       "id": "ph-amazon-ads",
       "section": "8",
-      "order": 81,
+      "order": 82,
       "title": "PLACEHOLDER · Amazon Ads",
       "weight_pct": 1.0,
       "effort_band": "placeholder",
@@ -1010,7 +1022,7 @@
     {
       "id": "ph-resenas-early",
       "section": "8",
-      "order": 82,
+      "order": 83,
       "title": "PLACEHOLDER · Reseñas early (éticas)",
       "weight_pct": 0.8,
       "effort_band": "placeholder",
@@ -1023,7 +1035,7 @@
     {
       "id": "ph-a-plus-content",
       "section": "8",
-      "order": 83,
+      "order": 84,
       "title": "PLACEHOLDER · A+ Content",
       "weight_pct": 0.8,
       "effort_band": "placeholder",
@@ -1036,7 +1048,7 @@
     {
       "id": "ph-email-lista-acelerador",
       "section": "8",
-      "order": 84,
+      "order": 85,
       "title": "PLACEHOLDER · Email / lista / Acelerador",
       "weight_pct": 0.6,
       "effort_band": "placeholder",
@@ -1049,7 +1061,7 @@
     {
       "id": "ficha-actualizada",
       "section": "9",
-      "order": 85,
+      "order": 86,
       "title": "Ficha actualizada",
       "weight_pct": 0.8,
       "effort_band": "medio",
@@ -1062,7 +1074,7 @@
     {
       "id": "checklist-archivado",
       "section": "9",
-      "order": 86,
+      "order": 87,
       "title": "Checklist archivado",
       "weight_pct": 0.3,
       "effort_band": "rapido",
@@ -1074,7 +1086,7 @@
     {
       "id": "lecciones-aprendidas",
       "section": "9",
-      "order": 87,
+      "order": 88,
       "title": "Lecciones aprendidas (≤5 bullets)",
       "weight_pct": 0.7,
       "effort_band": "medio",
@@ -1087,7 +1099,7 @@
     {
       "id": "no-abrir-charlotte",
       "section": "9",
-      "order": 88,
+      "order": 89,
       "title": "No abrir Charlotte hasta cerrar este",
       "weight_pct": 0.3,
       "effort_band": "rapido",
@@ -1099,7 +1111,7 @@
     {
       "id": "duplicar-pipeline-siguiente",
       "section": "9",
-      "order": 89,
+      "order": 90,
       "title": "Duplicar pipeline para el siguiente",
       "weight_pct": 0.4,
       "effort_band": "rapido",
