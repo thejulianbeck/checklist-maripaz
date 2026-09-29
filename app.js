@@ -1,16 +1,16 @@
 /* Maripaz Editorial Checklist PWA
-   Weighted progress + crudcrud shared sync
+   Weighted progress + Firebase Realtime Database sync (REST)
 */
 (() => {
   'use strict';
 
-  /* Sync: crudcrud (CORS OPTIONS 204). ExtendsClass blocked Safari preflight (OPTIONS 500). */
-  const SYNC_URL = 'https://crudcrud.com/api/b185ded9d00a47998a5c8c718a14c351/maripaz/6abc06122e237403e8640bdf';
+  /* Sync: Firebase RTDB REST (CORS OK from github.io). No SDK required. */
+  const SYNC_URL = 'https://checklist-maripaz-default-rtdb.firebaseio.com/maripaz.json';
   const LS_KEY = 'maripaz-checklist-v1';
   const PROJECT = 'maripaz';
-  const POLL_MS = 8000;
+  const POLL_MS = 20000;
   const PUT_DEBOUNCE_MS = 400;
-  /* crudcrud rejects large ms epochs on PUT (HTTP 500); use seconds. */
+  /* updatedAt in unix seconds (stable across clients). */
   function nowTs() { return Math.floor(Date.now() / 1000); }
 
   const el = {
@@ -107,7 +107,10 @@
     });
     if (!res.ok) throw new Error('GET ' + res.status);
     const data = await res.json();
-    // crudcrud includes _id — ignore it
+    // Firebase returns null if path empty; omits empty {} on write — treat missing as {}
+    if (data == null || typeof data !== 'object') {
+      return { project: PROJECT, updatedAt: 0, checked: {}, notes: {} };
+    }
     let updatedAt = Number(data.updatedAt) || 0;
     // normalize legacy ms timestamps
     if (updatedAt > 1e12) updatedAt = Math.floor(updatedAt / 1000);
@@ -479,9 +482,15 @@
   }
 
   function startPolling() {
-    clearInterval(pollTimer);
-    pollTimer = setInterval(pollRemote, POLL_MS);
+    function armPoll() {
+      clearInterval(pollTimer);
+      pollTimer = null;
+      if (document.hidden) return;
+      pollTimer = setInterval(pollRemote, POLL_MS);
+    }
+    armPoll();
     document.addEventListener('visibilitychange', () => {
+      armPoll();
       if (!document.hidden) pollRemote();
     });
     window.addEventListener('online', () => {
@@ -503,7 +512,7 @@
 
   async function boot() {
     try {
-      const res = await fetch('./data.json?v=20260929e', { cache: 'no-store' });
+      const res = await fetch('./data.json?v=20260929f', { cache: 'no-store' });
       DATA = await res.json();
     } catch (e) {
       el.sections.innerHTML = '<p class="panel">No se pudo cargar el checklist.</p>';

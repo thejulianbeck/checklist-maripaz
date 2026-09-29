@@ -1,6 +1,6 @@
 /* Service worker — Maripaz checklist PWA
    Caches shell for offline; network for sync API stays online-only. */
-const CACHE = 'maripaz-checklist-v5';
+const CACHE = 'maripaz-checklist-v6';
 const SHELL = [
   './',
   './index.html',
@@ -30,8 +30,14 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  // Never cache sync API (crudcrud or any cross-origin sync host)
-  if (url.hostname.includes('crudcrud.com') || url.hostname.includes('extendsclass.com')) {
+  // Never cache Firebase / Google sync hosts
+  const host = url.hostname;
+  if (
+    host.includes('firebaseio.com') ||
+    host.includes('firebasedatabase.app') ||
+    host.includes('googleapis.com') ||
+    host.includes('firebaseapp.com')
+  ) {
     event.respondWith(fetch(event.request));
     return;
   }
