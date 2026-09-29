@@ -543,7 +543,7 @@
 
   async function boot() {
     try {
-      const res = await fetch('./data.json?v=20260929g', { cache: 'no-store' });
+      const res = await fetch('./data.json?v=20260929h', { cache: 'no-store' });
       DATA = await res.json();
     } catch (e) {
       el.sections.innerHTML = '<p class="footer-note">No se pudo cargar el checklist.</p>';
