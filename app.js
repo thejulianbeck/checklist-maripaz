@@ -1,11 +1,11 @@
 /* Maripaz Editorial Checklist PWA
-   Weighted progress + ExtendsClass JSON Storage sync
+   Weighted progress + crudcrud shared sync
 */
 (() => {
   'use strict';
 
-  const BIN_URL = 'https://extendsclass.com/api/json-storage/bin/faeafdc';
-  const BIN_URL_ALT = 'https://json.extendsclass.com/bin/faeafdc';
+  /* Sync: crudcrud (CORS OPTIONS 204). ExtendsClass blocked Safari preflight (OPTIONS 500). */
+  const SYNC_URL = 'https://crudcrud.com/api/b185ded9d00a47998a5c8c718a14c351/maripaz/6abc06122e237403e8640bdf';
   const LS_KEY = 'maripaz-checklist-v1';
   const PROJECT = 'maripaz';
   const POLL_MS = 8000;
@@ -94,16 +94,14 @@
   }
 
   async function fetchRemote() {
-    const opts = { method: 'GET', cache: 'no-store', headers: { Accept: 'application/json' } };
-    let res;
-    try {
-      res = await fetch(BIN_URL, opts);
-      if (!res.ok) throw new Error('status ' + res.status);
-    } catch (e1) {
-      res = await fetch(BIN_URL_ALT, opts);
-      if (!res.ok) throw new Error('status ' + res.status);
-    }
+    const res = await fetch(SYNC_URL + '?t=' + Date.now(), {
+      method: 'GET',
+      cache: 'no-store',
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) throw new Error('GET ' + res.status);
     const data = await res.json();
+    // crudcrud includes _id — ignore it
     return {
       project: data.project || PROJECT,
       updatedAt: Number(data.updatedAt) || 0,
@@ -119,20 +117,13 @@
       checked: state.checked,
       notes: state.notes || {},
     });
-    const opts = {
+    const res = await fetch(SYNC_URL, {
       method: 'PUT',
       cache: 'no-store',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body,
-    };
-    let res;
-    try {
-      res = await fetch(BIN_URL, opts);
-      if (!res.ok) throw new Error('status ' + res.status);
-    } catch (e1) {
-      res = await fetch(BIN_URL_ALT, opts);
-      if (!res.ok) throw new Error('status ' + res.status);
-    }
+    });
+    if (!res.ok) throw new Error('PUT ' + res.status);
     return true;
   }
 
@@ -146,7 +137,8 @@
       }
       try {
         await putRemote();
-        setSync('', 'Sincronizado');
+        const hh = new Date().toLocaleTimeString('es-EC', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        setSync('', 'Sincronizado · ' + hh);
         syncFailWarned = false;
       } catch (e) {
         setSync('warn', 'Sync falló · local OK');
@@ -446,7 +438,8 @@
       if (localNewer && state.updatedAt > 0) {
         await putRemote();
       }
-      setSync('', 'Sincronizado');
+      const hh = new Date().toLocaleTimeString('es-EC', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      setSync('', 'Sincronizado · ' + hh);
     } catch (e) {
       setSync('warn', 'Sync falló · local OK');
       toast('Usando copia local. Reintentaremos sincronizar en segundo plano.');
@@ -468,7 +461,8 @@
         saveLocal();
         refreshChecksOnly();
         applyingRemote = false;
-        setSync('', 'Sincronizado');
+        const hh = new Date().toLocaleTimeString('es-EC', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        setSync('', 'Sincronizado · ' + hh);
       }
     } catch {
       // soft fail
@@ -500,7 +494,7 @@
 
   async function boot() {
     try {
-      const res = await fetch('./data.json?v=20260929c', { cache: 'no-store' });
+      const res = await fetch('./data.json?v=20260929d', { cache: 'no-store' });
       DATA = await res.json();
     } catch (e) {
       el.sections.innerHTML = '<p class="panel">No se pudo cargar el checklist.</p>';
