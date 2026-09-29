@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Maripaz Checklist">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a4d3e"/>
+      <stop offset="100%" stop-color="#0f2e26"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#g)"/>
+  <!-- soft glow circle -->
+  <circle cx="256" cy="230" r="150" fill="#c9a227" opacity="0.12"/>
+  <!-- checklist card -->
+  <rect x="140" y="120" width="232" height="280" rx="28" fill="#fff8ee"/>
+  <rect x="140" y="120" width="232" height="48" rx="28" fill="#c9a227"/>
+  <rect x="140" y="144" width="232" height="24" fill="#c9a227"/>
+  <!-- checks -->
+  <rect x="168" y="196" width="28" height="28" rx="6" fill="#1a4d3e"/>
+  <path d="M174 210 l8 8 14-16" fill="none" stroke="#fff8ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="212" y="200" width="128" height="18" rx="4" fill="#d4c4a8"/>
+  <rect x="168" y="248" width="28" height="28" rx="6" fill="#1a4d3e"/>
+  <path d="M174 262 l8 8 14-16" fill="none" stroke="#fff8ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="212" y="252" width="110" height="18" rx="4" fill="#d4c4a8"/>
+  <rect x="168" y="300" width="28" height="28" rx="6" fill="#e8dfd0" stroke="#1a4d3e" stroke-width="3"/>
+  <rect x="212" y="304" width="120" height="18" rx="4" fill="#e8dfd0"/>
+  <!-- star / christmas -->
+  <path d="M256 72 l10 28 h30 l-24 18 9 28 -25-18 -25 18 9-28 -24-18 h30 z" fill="#c9a227"/>
+  <!-- holly dots -->
+  <circle cx="190" cy="380" r="10" fill="#b33a3a"/>
+  <circle cx="214" cy="388" r="10" fill="#b33a3a"/>
+  <circle cx="322" cy="380" r="10" fill="#b33a3a"/>
+</svg>

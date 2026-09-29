@@ -1,0 +1,483 @@
+/* Maripaz Editorial Checklist PWA
+   Weighted progress + ExtendsClass JSON Storage sync
+*/
+(() => {
+  'use strict';
+
+  const BIN_URL = 'https://extendsclass.com/api/json-storage/bin/faeafdc';
+  const BIN_URL_ALT = 'https://json.extendsclass.com/bin/faeafdc';
+  const LS_KEY = 'maripaz-checklist-v1';
+  const PROJECT = 'maripaz';
+  const POLL_MS = 8000;
+  const PUT_DEBOUNCE_MS = 400;
+
+  const el = {
+    sections: document.getElementById('sections'),
+    progressLabel: document.getElementById('progress-label'),
+    progressPct: document.getElementById('progress-pct'),
+    progressFill: document.getElementById('progress-fill'),
+    syncPill: document.getElementById('sync-pill'),
+    syncText: document.getElementById('sync-text'),
+    toast: document.getElementById('toast'),
+    metaTitle: document.getElementById('meta-title'),
+    metaTipo: document.getElementById('meta-tipo'),
+    metaAutor: document.getElementById('meta-autor'),
+    metaAsins: document.getElementById('meta-asins'),
+    metaIsbn: document.getElementById('meta-isbn'),
+    itemCountChip: document.getElementById('item-count-chip'),
+  };
+
+  let DATA = null;
+  let state = {
+    project: PROJECT,
+    updatedAt: 0,
+    checked: {},
+    notes: {},
+  };
+  let putTimer = null;
+  let pollTimer = null;
+  let syncFailWarned = false;
+  let applyingRemote = false;
+
+  function toast(msg) {
+    el.toast.textContent = msg;
+    el.toast.classList.add('show');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => el.toast.classList.remove('show'), 2800);
+  }
+
+  function setSync(status, label) {
+    el.syncPill.classList.remove('syncing', 'offline', 'warn');
+    if (status) el.syncPill.classList.add(status);
+    el.syncText.textContent = label;
+  }
+
+  function loadLocal() {
+    try {
+      const raw = localStorage.getItem(LS_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== 'object') return null;
+      return {
+        project: parsed.project || PROJECT,
+        updatedAt: Number(parsed.updatedAt) || 0,
+        checked: parsed.checked && typeof parsed.checked === 'object' ? parsed.checked : {},
+        notes: parsed.notes && typeof parsed.notes === 'object' ? parsed.notes : {},
+      };
+    } catch {
+      return null;
+    }
+  }
+
+  function saveLocal() {
+    try {
+      localStorage.setItem(LS_KEY, JSON.stringify(state));
+    } catch (e) {
+      console.warn('localStorage failed', e);
+    }
+  }
+
+  function mergeStates(a, b) {
+    // last updatedAt wins for the whole checked/notes map
+    if ((b.updatedAt || 0) > (a.updatedAt || 0)) return {
+      project: PROJECT,
+      updatedAt: b.updatedAt,
+      checked: { ...(b.checked || {}) },
+      notes: { ...(b.notes || {}) },
+    };
+    return {
+      project: PROJECT,
+      updatedAt: a.updatedAt || 0,
+      checked: { ...(a.checked || {}) },
+      notes: { ...(a.notes || {}) },
+    };
+  }
+
+  async function fetchRemote() {
+    const opts = { method: 'GET', cache: 'no-store', headers: { Accept: 'application/json' } };
+    let res;
+    try {
+      res = await fetch(BIN_URL, opts);
+      if (!res.ok) throw new Error('status ' + res.status);
+    } catch (e1) {
+      res = await fetch(BIN_URL_ALT, opts);
+      if (!res.ok) throw new Error('status ' + res.status);
+    }
+    const data = await res.json();
+    return {
+      project: data.project || PROJECT,
+      updatedAt: Number(data.updatedAt) || 0,
+      checked: data.checked && typeof data.checked === 'object' ? data.checked : {},
+      notes: data.notes && typeof data.notes === 'object' ? data.notes : {},
+    };
+  }
+
+  async function putRemote() {
+    const body = JSON.stringify({
+      project: PROJECT,
+      updatedAt: state.updatedAt,
+      checked: state.checked,
+      notes: state.notes || {},
+    });
+    const opts = {
+      method: 'PUT',
+      cache: 'no-store',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body,
+    };
+    let res;
+    try {
+      res = await fetch(BIN_URL, opts);
+      if (!res.ok) throw new Error('status ' + res.status);
+    } catch (e1) {
+      res = await fetch(BIN_URL_ALT, opts);
+      if (!res.ok) throw new Error('status ' + res.status);
+    }
+    return true;
+  }
+
+  function schedulePut() {
+    clearTimeout(putTimer);
+    setSync('syncing', 'Sincronizando…');
+    putTimer = setTimeout(async () => {
+      if (!navigator.onLine) {
+        setSync('offline', 'Sin conexión (local)');
+        return;
+      }
+      try {
+        await putRemote();
+        setSync('', 'Sincronizado');
+        syncFailWarned = false;
+      } catch (e) {
+        setSync('warn', 'Sync falló · local OK');
+        if (!syncFailWarned) {
+          syncFailWarned = true;
+          toast('No se pudo sincronizar en la nube. El progreso queda guardado en este dispositivo.');
+        }
+      }
+    }, PUT_DEBOUNCE_MS);
+  }
+
+  function allItems() {
+    const list = [];
+    for (const sec of DATA.sections) {
+      for (const it of sec.items) list.push(it);
+    }
+    return list;
+  }
+
+  function computeProgress() {
+    // Weighted: sum weight_pct of checked items (N/A have 0, placeholders count)
+    let doneWeight = 0;
+    let doneCount = 0;
+    let actionable = 0;
+    for (const it of allItems()) {
+      const w = Number(it.weight_pct) || 0;
+      if (it.na || w === 0) continue;
+      actionable += 1;
+      if (state.checked[it.id]) {
+        doneWeight += w;
+        doneCount += 1;
+      }
+    }
+    const pct = Math.min(100, Math.round(doneWeight * 10) / 10);
+    return { pct, doneCount, actionable, doneWeight };
+  }
+
+  function updateProgressUI() {
+    const { pct, doneCount, actionable } = computeProgress();
+    el.progressPct.textContent = (Number.isInteger(pct) ? pct : pct.toFixed(1)) + '%';
+    el.progressFill.style.width = pct + '%';
+    el.progressLabel.textContent = `${doneCount} de ${actionable} · progreso ponderado`;
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function tagHtml(tags, it) {
+    const parts = [];
+    if (it.na) parts.push('<span class="tag tag-NA">N/A</span>');
+    if (it.placeholder) parts.push('<span class="tag tag-PH">PLACEHOLDER</span>');
+    for (const t of tags || []) {
+      parts.push(`<span class="tag tag-${escapeHtml(t)}">[${escapeHtml(t)}]</span>`);
+    }
+    return parts.join('');
+  }
+
+  function render() {
+    const meta = DATA.meta;
+    el.metaTitle.textContent = meta.title;
+    el.metaTipo.textContent = meta.tipo;
+    el.metaAutor.textContent = meta.autor;
+    el.metaAsins.textContent = `${meta.asins.paperback} (tapa blanda) / ${meta.asins.kindle} (Kindle)`;
+    el.metaIsbn.textContent = meta.isbn;
+    el.itemCountChip.textContent = `${allItems().length} ítems`;
+
+    const frag = document.createDocumentFragment();
+    for (const sec of DATA.sections) {
+      const sectionEl = document.createElement('section');
+      sectionEl.className = 'section' + (sec.num <= 1 ? ' open' : '');
+      sectionEl.dataset.section = sec.num;
+
+      const actionable = sec.items.filter((it) => !it.na && (Number(it.weight_pct) || 0) > 0);
+      const doneInSec = actionable.filter((it) => state.checked[it.id]).length;
+      const secWeightDone = sec.items.reduce((acc, it) => {
+        const w = Number(it.weight_pct) || 0;
+        return acc + (state.checked[it.id] && w > 0 ? w : 0);
+      }, 0);
+      const secWeightTotal = sec.items.reduce((acc, it) => acc + (Number(it.weight_pct) || 0), 0);
+
+      const head = document.createElement('button');
+      head.type = 'button';
+      head.className = 'section-head';
+      head.setAttribute('aria-expanded', sectionEl.classList.contains('open') ? 'true' : 'false');
+      head.innerHTML = `
+        <span class="left">
+          <span class="section-num">Sección ${sec.num}</span>
+          <span class="section-title">${escapeHtml(sec.title)}</span>
+        </span>
+        <span class="section-count">${doneInSec}/${actionable.length} · ${secWeightDone.toFixed(1)}/${secWeightTotal.toFixed(1)}%</span>
+        <span class="chevron" aria-hidden="true">▸</span>
+      `;
+      head.addEventListener('click', () => {
+        sectionEl.classList.toggle('open');
+        head.setAttribute('aria-expanded', sectionEl.classList.contains('open') ? 'true' : 'false');
+      });
+
+      const body = document.createElement('div');
+      body.className = 'section-body';
+      if (sec.intro) {
+        const intro = document.createElement('p');
+        intro.className = 'section-intro';
+        intro.textContent = sec.intro;
+        body.appendChild(intro);
+      }
+
+      let lastSub = undefined;
+      for (const it of sec.items) {
+        if (it.subsection && it.subsection !== lastSub) {
+          lastSub = it.subsection;
+          const sub = document.createElement('div');
+          sub.className = 'subsection-label';
+          sub.textContent = it.subsection;
+          body.appendChild(sub);
+        }
+
+        const item = document.createElement('div');
+        const isDone = !!state.checked[it.id];
+        item.className = 'item'
+          + (isDone ? ' done' : '')
+          + (it.na ? ' na' : '')
+          + (it.placeholder ? ' placeholder' : '');
+        item.dataset.id = it.id;
+
+        const check = document.createElement('button');
+        check.type = 'button';
+        check.className = 'check';
+        check.setAttribute('aria-label', it.na ? 'N/A' : (isDone ? 'Desmarcar' : 'Marcar hecho'));
+        if (it.na) {
+          check.disabled = true;
+          check.textContent = 'N/A';
+        } else {
+          check.textContent = isDone ? '✓' : '';
+          check.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleItem(it.id);
+          });
+        }
+
+        const main = document.createElement('div');
+        main.className = 'item-main';
+        main.innerHTML = `
+          <p class="item-title">${escapeHtml(it.title)}</p>
+          <div class="item-tags">${tagHtml(it.tags, it)}</div>
+        `;
+        main.addEventListener('click', () => {
+          if (it.na) return;
+          toggleItem(it.id);
+        });
+
+        const expand = document.createElement('button');
+        expand.type = 'button';
+        expand.className = 'expand';
+        expand.setAttribute('aria-label', 'Ver detalle');
+        expand.textContent = '▾';
+        expand.addEventListener('click', (e) => {
+          e.stopPropagation();
+          item.classList.toggle('open');
+        });
+
+        const detail = document.createElement('div');
+        detail.className = 'item-detail';
+        const weightNote = it.na
+          ? 'Peso: 0 % (N/A — no cuenta en el progreso).'
+          : `Peso: ${Number(it.weight_pct).toFixed(1)} % del proyecto${it.effort_band ? ' · ' + it.effort_band : ''}.`;
+        let cites = '';
+        if (it.cites && it.cites.length) {
+          cites = `<div class="cites">${it.cites.map((c) => `<span class="tag tag-cite">(${escapeHtml(c)})</span>`).join('')}</div>`;
+        }
+        detail.innerHTML = `
+          <div>${escapeHtml(it.description || '')}</div>
+          <div style="margin-top:.45rem;font-size:.82rem;color:var(--muted)">${escapeHtml(weightNote)}</div>
+          ${cites}
+        `;
+
+        item.appendChild(check);
+        item.appendChild(main);
+        item.appendChild(expand);
+        item.appendChild(detail);
+        body.appendChild(item);
+      }
+
+      sectionEl.appendChild(head);
+      sectionEl.appendChild(body);
+      frag.appendChild(sectionEl);
+    }
+    el.sections.innerHTML = '';
+    el.sections.appendChild(frag);
+    updateProgressUI();
+  }
+
+  function refreshChecksOnly() {
+    // lighter update after remote poll
+    for (const item of el.sections.querySelectorAll('.item')) {
+      const id = item.dataset.id;
+      const it = allItems().find((x) => x.id === id);
+      if (!it || it.na) continue;
+      const done = !!state.checked[id];
+      item.classList.toggle('done', done);
+      const check = item.querySelector('.check');
+      if (check && !check.disabled) {
+        check.textContent = done ? '✓' : '';
+        check.setAttribute('aria-label', done ? 'Desmarcar' : 'Marcar hecho');
+      }
+    }
+    // update section counts
+    for (const sectionEl of el.sections.querySelectorAll('.section')) {
+      const num = Number(sectionEl.dataset.section);
+      const sec = DATA.sections.find((s) => s.num === num);
+      if (!sec) continue;
+      const actionable = sec.items.filter((it) => !it.na && (Number(it.weight_pct) || 0) > 0);
+      const doneInSec = actionable.filter((it) => state.checked[it.id]).length;
+      const secWeightDone = sec.items.reduce((acc, it) => {
+        const w = Number(it.weight_pct) || 0;
+        return acc + (state.checked[it.id] && w > 0 ? w : 0);
+      }, 0);
+      const secWeightTotal = sec.items.reduce((acc, it) => acc + (Number(it.weight_pct) || 0), 0);
+      const countEl = sectionEl.querySelector('.section-count');
+      if (countEl) {
+        countEl.textContent = `${doneInSec}/${actionable.length} · ${secWeightDone.toFixed(1)}/${secWeightTotal.toFixed(1)}%`;
+      }
+    }
+    updateProgressUI();
+  }
+
+  function toggleItem(id) {
+    if (applyingRemote) return;
+    const it = allItems().find((x) => x.id === id);
+    if (!it || it.na) return;
+    if (state.checked[id]) delete state.checked[id];
+    else state.checked[id] = true;
+    state.updatedAt = Date.now();
+    state.project = PROJECT;
+    saveLocal();
+    refreshChecksOnly();
+    schedulePut();
+  }
+
+  async function initialSync() {
+    const local = loadLocal();
+    if (local) state = mergeStates(state, local);
+
+    if (!navigator.onLine) {
+      setSync('offline', 'Sin conexión (local)');
+      return;
+    }
+    setSync('syncing', 'Sincronizando…');
+    try {
+      const remote = await fetchRemote();
+      const merged = mergeStates(state, remote);
+      // If local was newer, push; if remote newer or equal after merge of remote, use remote
+      const localNewer = (state.updatedAt || 0) > (remote.updatedAt || 0);
+      state = merged;
+      saveLocal();
+      if (localNewer && state.updatedAt > 0) {
+        await putRemote();
+      }
+      setSync('', 'Sincronizado');
+    } catch (e) {
+      setSync('warn', 'Sync falló · local OK');
+      toast('Usando copia local. Reintentaremos sincronizar en segundo plano.');
+    }
+  }
+
+  async function pollRemote() {
+    if (document.hidden || !navigator.onLine) return;
+    try {
+      const remote = await fetchRemote();
+      if ((remote.updatedAt || 0) > (state.updatedAt || 0)) {
+        applyingRemote = true;
+        state = {
+          project: PROJECT,
+          updatedAt: remote.updatedAt,
+          checked: { ...(remote.checked || {}) },
+          notes: { ...(remote.notes || {}) },
+        };
+        saveLocal();
+        refreshChecksOnly();
+        applyingRemote = false;
+        setSync('', 'Sincronizado');
+      }
+    } catch {
+      // soft fail
+    }
+  }
+
+  function startPolling() {
+    clearInterval(pollTimer);
+    pollTimer = setInterval(pollRemote, POLL_MS);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) pollRemote();
+    });
+    window.addEventListener('online', () => {
+      setSync('syncing', 'Sincronizando…');
+      schedulePut();
+      pollRemote();
+    });
+    window.addEventListener('offline', () => {
+      setSync('offline', 'Sin conexión (local)');
+    });
+  }
+
+  function registerSW() {
+    if (!('serviceWorker' in navigator)) return;
+    navigator.serviceWorker.register('./sw.js').catch((e) => {
+      console.warn('SW register failed', e);
+    });
+  }
+
+  async function boot() {
+    try {
+      const res = await fetch('./data.json', { cache: 'no-store' });
+      DATA = await res.json();
+    } catch (e) {
+      el.sections.innerHTML = '<p class="panel">No se pudo cargar el checklist.</p>';
+      return;
+    }
+    const n = allItems().length;
+    if (n !== 89) {
+      console.warn('Expected 89 items, got', n);
+    }
+    await initialSync();
+    render();
+    startPolling();
+    registerSW();
+  }
+
+  boot();
+})();

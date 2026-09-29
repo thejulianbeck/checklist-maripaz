@@ -1,0 +1,32 @@
+{
+  "name": "Checklist Maripaz — Editorial KDP",
+  "short_name": "Maripaz",
+  "description": "Checklist editorial interactivo: Maripaz y la Navidad que Casi Desaparece",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f2e26",
+  "theme_color": "#1a4d3e",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

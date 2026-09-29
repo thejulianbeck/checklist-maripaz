@@ -1,0 +1,1768 @@
+{
+  "meta": {
+    "title": "Maripaz y la Navidad que Casi Desaparece",
+    "tipo": "reempaque + QC escrito · Amazon.es · Navidad 2026 · decisión A/B/C",
+    "autor": "Maripaz Becerra",
+    "asins": {
+      "paperback": "B0DQV69S13",
+      "kindle": "B0DRCZL8XW"
+    },
+    "isbn": "9798303546943",
+    "project": "maripaz",
+    "link": "https://a.co/d/0aStQbDp",
+    "progress_mode": "weighted",
+    "sum_weight_pct": 100.0,
+    "weights_version": "1.0"
+  },
+  "sections": [
+    {
+      "id": "s0",
+      "num": 0,
+      "title": "Cómo usar + snapshot actual",
+      "intro": "Sigue las fases **en orden**. Cada ítem tiene título corto, una línea de descripción, cita del curso cuando aplica, y tags. Lo que no aplica a este libro ya está marcado **N/A** (no lo abras).",
+      "items": [
+        {
+          "id": "s0-confirmar-snapshot-en-familia",
+          "section": 0,
+          "subsection": "Snapshot (rellenado — confirmar lo marcado abajo)",
+          "title": "Confirmar snapshot en familia",
+          "description": "Revisar la ficha FICHA-Maripaz.md y marcar errores u omisiones antes de research.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.3,
+          "effort_band": "rapido",
+          "weight_id": "confirmar-snapshot-familia",
+          "order": 1
+        },
+        {
+          "id": "s0-confirmar-listing-amazon-es",
+          "section": 0,
+          "subsection": "Snapshot (rellenado — confirmar lo marcado abajo)",
+          "title": "Confirmar listing Amazon.es",
+          "description": "Abrir el short link y anotar la URL .es real (puede resolver a .com).",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.4,
+          "effort_band": "rapido",
+          "weight_id": "confirmar-listing-amazon-es",
+          "order": 2
+        },
+        {
+          "id": "s0-anotar-precios-actuales",
+          "section": 0,
+          "subsection": "Snapshot (rellenado — confirmar lo marcado abajo)",
+          "title": "Anotar precios actuales",
+          "description": "Kindle y paperback en .es (EUR) y, si aplica, otros marketplaces.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "EUR"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.4,
+          "effort_band": "rapido",
+          "weight_id": "anotar-precios-actuales",
+          "order": 3
+        },
+        {
+          "id": "s0-archivar-archivo-de-portada",
+          "section": 0,
+          "subsection": "Snapshot (rellenado — confirmar lo marcado abajo)",
+          "title": "Archivar archivo de portada",
+          "description": "Guardar en la carpeta del proyecto la portada paperback y la frontal ebook.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.4,
+          "effort_band": "rapido",
+          "weight_id": "archivar-archivo-portada",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "s1",
+      "num": 1,
+      "title": "N/A — no abrir en este título",
+      "intro": "Estos pasos del maestro **no aplican** porque el libro ya existe y la familia lo escribió. Déjalos cerrados.",
+      "items": [
+        {
+          "id": "s1-na-elegir-terreno-ficcion-vs-nf-desde-cero",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Elegir terreno ficción vs NF desde cero",
+          "description": "El libro ya es ficción infantil cristiana de Navidad; no reabrir el gate como si no hubiera libro. (S1 M0) · N/A reempaque",
+          "tags": [],
+          "cites": [
+            "S1 M0"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-elegir-terreno",
+          "order": 5
+        },
+        {
+          "id": "s1-na-lista-de-10-20-candidatos-de-nicho",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Lista de 10–20 candidatos de nicho",
+          "description": "No buscar ideas nuevas; validar el nicho del libro existente. (S1 M3) · N/A",
+          "tags": [],
+          "cites": [
+            "S1 M3"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-lista-candidatos-nicho",
+          "order": 6
+        },
+        {
+          "id": "s1-na-niche-down-desde-categoria-vacia",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Niche down desde categoría vacía",
+          "description": "No partir de mapa mental a ciegas; el terreno ya está acotado. (S1 M1A/M1B) · N/A parcial",
+          "tags": [],
+          "cites": [
+            "S1 M1A/M1B"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-niche-down",
+          "order": 7
+        },
+        {
+          "id": "s1-na-escribir-manuscrito-desde-cero",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Escribir manuscrito desde cero",
+          "description": "El interior ya está; solo QC / posible reescritura ligera. (S3 L04) · N/A escrito",
+          "tags": [],
+          "cites": [
+            "S3 L04"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-escribir-manuscrito",
+          "order": 8
+        },
+        {
+          "id": "s1-na-esquema-largo-nf-30-40k",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Esquema largo NF 30–40k",
+          "description": "No es non-fiction de ese tamaño. (S3 L04) · N/A",
+          "tags": [],
+          "cites": [
+            "S3 L04"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-esquema-nf",
+          "order": 9
+        },
+        {
+          "id": "s1-na-ghostwriter-agencia-contrato",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Ghostwriter / agencia / contrato",
+          "description": "Default editorial familiar: escriben ustedes. (S3 L06–L09) · N/A",
+          "tags": [],
+          "cites": [
+            "S3 L06–L09"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-ghostwriter",
+          "order": 10
+        },
+        {
+          "id": "s1-na-modulos-de-craft-creativo",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Módulos de craft creativo",
+          "description": "Fuera del pipeline capacitado; la familia escribe. · N/A",
+          "tags": [],
+          "cites": [],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-modulos-craft",
+          "order": 11
+        },
+        {
+          "id": "s1-na-pipeline-charlotte",
+          "section": 1,
+          "subsection": null,
+          "title": "N/A · Pipeline Charlotte",
+          "description": "«Maripaz y el regalo de Charlotte» queda aparcado hasta cerrar este título. · N/A esta pasada",
+          "tags": [],
+          "cites": [],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-pipeline-charlotte",
+          "order": 12
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "num": 2,
+      "title": "Fundamentos / S0 — puerta ligera (piloto)",
+      "intro": "Gate de expectativas para la familia; no sustituye S1–S3 de este libro.",
+      "items": [
+        {
+          "id": "s2-mapa-del-programa",
+          "section": 2,
+          "subsection": null,
+          "title": "Mapa del programa",
+          "description": "Recordar que KDP es sistema acumulativo (un título bien hecho > muchos a medias). (Fundamentos)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "Fundamentos"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.3,
+          "effort_band": "rapido",
+          "weight_id": "mapa-programa",
+          "order": 13
+        },
+        {
+          "id": "s2-vocabulario-operativo",
+          "section": 2,
+          "subsection": null,
+          "title": "Vocabulario operativo",
+          "description": "Dominar BSR, backend, empaque, CTR, KU/Select, A+, persona antes del research. (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.4,
+          "effort_band": "rapido",
+          "weight_id": "vocabulario-operativo",
+          "order": 14
+        },
+        {
+          "id": "s2-tres-formatos-anclaje",
+          "section": 2,
+          "subsection": null,
+          "title": "Tres formatos + anclaje",
+          "description": "Plan: Kindle (anclaje bajo) + paperback (margen/ads) + hardcover (anclaje alto); hoy falta hardcover. (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.5,
+          "effort_band": "rapido",
+          "weight_id": "tres-formatos-anclaje",
+          "order": 15
+        },
+        {
+          "id": "s2-anatomia-de-ficha",
+          "section": 2,
+          "subsection": null,
+          "title": "Anatomía de ficha",
+          "description": "Saber qué ve el comprador (padre) en la página: portada, título, precio, descripción, A+. (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.5,
+          "effort_band": "rapido",
+          "weight_id": "anatomia-ficha",
+          "order": 16
+        },
+        {
+          "id": "s2-politicas-kdp-vigentes",
+          "section": 2,
+          "subsection": null,
+          "title": "Políticas KDP vigentes",
+          "description": "Revisar en consola palabras restringidas y límites antes de tocar título/descripción. (S0) / políticas KDP",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.5,
+          "effort_band": "medio",
+          "weight_id": "politicas-kdp-vigentes",
+          "order": 17
+        },
+        {
+          "id": "s2-expectativa-navidad-2026",
+          "section": 2,
+          "subsection": null,
+          "title": "Expectativa Navidad 2026",
+          "description": "Aceptar lead time largo: research → empaque → QC → archivos → soft launch antes de temporada. (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.3,
+          "effort_band": "rapido",
+          "weight_id": "expectativa-navidad-2026",
+          "order": 18
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "num": 3,
+      "title": "S1 — Validar el nicho de ESTE libro (no inventar uno nuevo)",
+      "intro": "Objetivo: encajar el libro ya escrito en el mejor nicho/comps/keywords de Amazon.es para ficción cristiana infantil de Navidad. BookBeam solo cuando el research sea inminente.",
+      "items": [
+        {
+          "id": "s3-fijar-terreno-del-libro",
+          "section": 3,
+          "subsection": "3.1 Orientación (sin candidatos desde cero)",
+          "title": "Fijar terreno del libro",
+          "description": "Documentar: ficción infantil cristiana navideña · comprador = padres · niño 6–12. + (S1 M0) · reempaque",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S1 M0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.8,
+          "effort_band": "rapido",
+          "weight_id": "fijar-terreno-libro",
+          "order": 19
+        },
+        {
+          "id": "s3-explorar-amazon-es-nativo-comps-del-nicho",
+          "section": 3,
+          "subsection": "3.1 Orientación (sin candidatos desde cero)",
+          "title": "Explorar Amazon.es nativo (comps del nicho)",
+          "description": "Más vendidos Navidad infantil cristiana / valores; anotar *temas*, no copiar títulos. (S1 M3)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S1 M3"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.5,
+          "effort_band": "medio",
+          "weight_id": "explorar-amazon-es-comps",
+          "order": 20
+        },
+        {
+          "id": "s3-listar-5-8-comps-reales",
+          "section": 3,
+          "subsection": "3.1 Orientación (sin candidatos desde cero)",
+          "title": "Listar 5–8 comps reales",
+          "description": "ASINs cercanos en promesa (familia + Navidad + fe); base para BookBeam. + (S1 M3) · adaptado (no 10–20 ideas)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S1 M3"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.2,
+          "effort_band": "medio",
+          "weight_id": "listar-comps-reales",
+          "order": 21
+        },
+        {
+          "id": "s3-activar-bookbeam-cuando-toque",
+          "section": 3,
+          "subsection": "3.2 BookBeam — plan bot, cupos Julián",
+          "title": "Activar BookBeam cuando toque",
+          "description": "Solo al iniciar research inminente (plan Basic u otro acordado). · no antes",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.4,
+          "effort_band": "rapido",
+          "weight_id": "activar-bookbeam",
+          "order": 22
+        },
+        {
+          "id": "s3-plan-de-busquedas-bookbeam",
+          "section": 3,
+          "subsection": "3.2 BookBeam — plan bot, cupos Julián",
+          "title": "Plan de búsquedas BookBeam",
+          "description": "Bot redacta plan (ASINs comps, categorías .es, word cloud, reverse) ajustado a este libro. plan · (S1 M2) (S1 M4)",
+          "tags": [
+            "BOT",
+            "HUMANO",
+            "BOOKBEAM-CUPO"
+          ],
+          "cites": [
+            "S1 M2",
+            "S1 M4"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.6,
+          "effort_band": "medio",
+          "weight_id": "plan-busquedas-bookbeam",
+          "order": 23
+        },
+        {
+          "id": "s3-category-history-de-las-rutas-actuales",
+          "section": 3,
+          "subsection": "3.2 BookBeam — plan bot, cupos Julián",
+          "title": "Category History de las rutas actuales",
+          "description": "Tendencia de las 3 categorías Kindle del intake (no solo foto BSR). (S1 M4) (S1 M6)",
+          "tags": [
+            "HUMANO",
+            "BOOKBEAM-CUPO"
+          ],
+          "cites": [
+            "S1 M4",
+            "S1 M6"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.8,
+          "effort_band": "lento",
+          "weight_id": "category-history",
+          "order": 24
+        },
+        {
+          "id": "s3-word-cloud-del-nicho-navidad-infantil",
+          "section": 3,
+          "subsection": "3.2 BookBeam — plan bot, cupos Julián",
+          "title": "Word Cloud del nicho Navidad infantil",
+          "description": "Palabras frecuentes en títulos comps → insumo título/backend S2. (S1 M4)",
+          "tags": [
+            "HUMANO",
+            "BOOKBEAM-CUPO"
+          ],
+          "cites": [
+            "S1 M4"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.8,
+          "effort_band": "lento",
+          "weight_id": "word-cloud-nicho",
+          "order": 25
+        },
+        {
+          "id": "s3-reverse-lookup-de-comps",
+          "section": 3,
+          "subsection": "3.2 BookBeam — plan bot, cupos Julián",
+          "title": "Reverse Lookup de comps",
+          "description": "Keywords con las que rankean los 5–8 comps. plan · (S1 M4)",
+          "tags": [
+            "BOT",
+            "HUMANO",
+            "BOOKBEAM-CUPO"
+          ],
+          "cites": [
+            "S1 M4"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.8,
+          "effort_band": "lento",
+          "weight_id": "reverse-lookup-comps",
+          "order": 26
+        },
+        {
+          "id": "s3-helium-10-kdspy-rocket",
+          "section": 3,
+          "subsection": "3.2 BookBeam — plan bot, cupos Julián",
+          "title": "Helium 10 / KDSpy / Rocket",
+          "description": "Solo si hace falta un hueco que BookBeam no cubra; tools = estimaciones. (S1 M5) (S1 M2) · opcional",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S1 M5",
+            "S1 M2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.8,
+          "effort_band": "medio",
+          "weight_id": "helium-kdspy-rocket",
+          "order": 27
+        },
+        {
+          "id": "s3-leer-bsr-con-historico-comps-no-inventar-el-nuestro",
+          "section": 3,
+          "subsection": "3.3 Scorecard y persona (padres)",
+          "title": "Leer BSR con histórico (comps, no inventar el nuestro)",
+          "description": "Anotar hasta dónde hay señal de venta en el nicho. (S1 M6) · no inventar BSR de Maripaz",
+          "tags": [
+            "HUMANO",
+            "BOOKBEAM-CUPO"
+          ],
+          "cites": [
+            "S1 M6"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.8,
+          "effort_band": "lento",
+          "weight_id": "leer-bsr-historico",
+          "order": 28
+        },
+        {
+          "id": "s3-resenas-de-lideres-huecos",
+          "section": 3,
+          "subsection": "3.3 Scorecard y persona (padres)",
+          "title": "Reseñas de líderes (huecos)",
+          "description": "Leer 5–10 negativas de comps = brief de lo que padres echan en falta. (S1 M6) (S1 E2M2)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S1 M6",
+            "S1 E2M2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.6,
+          "effort_band": "medio",
+          "weight_id": "resenas-lideres-huecos",
+          "order": 29
+        },
+        {
+          "id": "s3-scorecard-7-criterios-sobre-el-nicho-actual",
+          "section": 3,
+          "subsection": "3.3 Scorecard y persona (padres)",
+          "title": "Scorecard 7 criterios sobre el nicho actual",
+          "description": "BSR, reseñas/tendencia, rentabilidad formato/páginas/precio, tipo editor, perfil autor, calidad empaque, evidencia autopubs. + matriz (S1 M8)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S1 M8"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 3.0,
+          "effort_band": "lento",
+          "weight_id": "scorecard-7-criterios",
+          "order": 30
+        },
+        {
+          "id": "s3-semaforo-go-no-go-del-nicho",
+          "section": 3,
+          "subsection": "3.3 Scorecard y persona (padres)",
+          "title": "Semáforo go/no-go del nicho",
+          "description": "5+ verdes prioritario; 3–4 sin dealbreaker viable; dealbreaker = subnicho o opción C. (S1 M8)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S1 M8"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.4,
+          "effort_band": "medio",
+          "weight_id": "semaforo-go-nogo",
+          "order": 31
+        },
+        {
+          "id": "s3-avatar-comprador-padres",
+          "section": 3,
+          "subsection": "3.3 Scorecard y persona (padres)",
+          "title": "Avatar comprador (padres)",
+          "description": "Quién compra; qué busca en Navidad cristiana para 6–12; objeciones; promesa diferenciadora de Maripaz. + borrador (S1 E2M3)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S1 E2M3"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.5,
+          "effort_band": "medio",
+          "weight_id": "avatar-comprador-padres",
+          "order": 32
+        },
+        {
+          "id": "s3-cerrar-conclusiones-s1",
+          "section": 3,
+          "subsection": "3.3 Scorecard y persona (padres)",
+          "title": "Cerrar conclusiones S1",
+          "description": "Una página: nicho elegido, por qué encaja este libro, riesgos estacionales Navidad. (S1 Conclusiones)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S1 Conclusiones"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.9,
+          "effort_band": "medio",
+          "weight_id": "cerrar-conclusiones-s1",
+          "order": 33
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "num": 4,
+      "title": "Decisión de listing (A / B / C)",
+      "intro": "Obligatoria tras research. Firma: papá, mamá, Maripaz y Julián.",
+      "items": [
+        {
+          "id": "s4-opcion-a-mantener-asins",
+          "section": 4,
+          "subsection": null,
+          "title": "Opción A — Mantener ASINs",
+          "description": "Research confirma que se puede mejorar sin matar historial. (S1) (S2) · reempaque",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S1",
+            "S2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.4,
+          "effort_band": "medio",
+          "weight_id": "opcion-a-mantener-asins",
+          "order": 34
+        },
+        {
+          "id": "s4-opcion-b-modificar-ficha-sobre-mismos-asins",
+          "section": 4,
+          "subsection": null,
+          "title": "Opción B — Modificar ficha sobre mismos ASINs",
+          "description": "Título/portada/descripción/categorías/backend cuando política KDP lo permita. (S2)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.5,
+          "effort_band": "medio",
+          "weight_id": "opcion-b-modificar-ficha",
+          "order": 35
+        },
+        {
+          "id": "s4-opcion-c-eliminar-republicar",
+          "section": 4,
+          "subsection": null,
+          "title": "Opción C — Eliminar + republicar",
+          "description": "Si relanzamiento limpio (p. ej. físico/título) mejora para Navidad 2026; verificar política vigente. · consola KDP",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.6,
+          "effort_band": "lento",
+          "weight_id": "opcion-c-eliminar-republicar",
+          "order": 36
+        },
+        {
+          "id": "s4-registrar-decision-fecha-motivo",
+          "section": 4,
+          "subsection": null,
+          "title": "Registrar decisión + fecha + motivo",
+          "description": "Una línea en FICHA-Maripaz.md. + documentar",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.2,
+          "effort_band": "medio",
+          "weight_id": "registrar-decision",
+          "order": 37
+        },
+        {
+          "id": "s4-comunicar-a-todo-el-equipo",
+          "section": 4,
+          "subsection": null,
+          "title": "Comunicar a todo el equipo",
+          "description": "Misma decisión para los cuatro; no avances en solitario.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.3,
+          "effort_band": "rapido",
+          "weight_id": "comunicar-equipo",
+          "order": 38
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "num": 5,
+      "title": "S2 — Empaque (título → portada → descripción → backend)",
+      "intro": "**Regla:** título, portada y descripción = una sola promesa. `(S2 E0)` Promesa borrador: aventura familiar de Navidad + verdadero significado cristiano (nacimiento de Jesús).",
+      "items": [
+        {
+          "id": "s5-cinco-senales",
+          "section": 5,
+          "subsection": "5.1 Sistema de promesa",
+          "title": "Cinco señales",
+          "description": "Relevancia, engagement, CTR, ventas, reseñas (cómo se refuerzan en este listing). (S2 E0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.7,
+          "effort_band": "medio",
+          "weight_id": "cinco-senales",
+          "order": 39
+        },
+        {
+          "id": "s5-coherencia-de-promesa",
+          "section": 5,
+          "subsection": "5.1 Sistema de promesa",
+          "title": "Coherencia de promesa",
+          "description": "Lo que dicen título/portada/descripción = lo que entrega el PDF. (S2 E0) (S3 L02)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E0",
+            "S3 L02"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.8,
+          "effort_band": "medio",
+          "weight_id": "coherencia-promesa",
+          "order": 40
+        },
+        {
+          "id": "s5-rufus-intencion-de-padres",
+          "section": 5,
+          "subsection": "5.1 Sistema de promesa",
+          "title": "Rufus / intención de padres",
+          "description": "Casos de uso reales: lectura en familia junto al árbol, valores, nacimiento de Jesús. + (S2 E0)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S2 E0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.7,
+          "effort_band": "medio",
+          "weight_id": "rufus-intencion-padres",
+          "order": 41
+        },
+        {
+          "id": "s5-anti-stuffing",
+          "section": 5,
+          "subsection": "5.1 Sistema de promesa",
+          "title": "Anti-stuffing",
+          "description": "No meter keywords ilegibles en título ni descripción. (S2 E0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.2,
+          "effort_band": "rapido",
+          "weight_id": "anti-stuffing",
+          "order": 42
+        },
+        {
+          "id": "s5-conteo-regla-178",
+          "section": 5,
+          "subsection": "5.2 Título (+ subtítulo)",
+          "title": "Conteo regla 178",
+          "description": "Medir título (+ posible subtítulo ficción); sin restringidas; sin repetir palabras entre ambos. + conteo (S2 E1M1)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S2 E1M1"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.8,
+          "effort_band": "medio",
+          "weight_id": "conteo-regla-178",
+          "order": 43
+        },
+        {
+          "id": "s5-estudiar-estructura-de-5-10-comps-ficcion",
+          "section": 5,
+          "subsection": "5.2 Título (+ subtítulo)",
+          "title": "Estudiar estructura de 5–10 comps ficción",
+          "description": "Copiar *estructura* (evocador + subtítulo de género/elementos), no el texto. (S2 E1M1) (S2 E1M2B)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E1M1",
+            "S2 E1M2B"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.4,
+          "effort_band": "medio",
+          "weight_id": "estudiar-estructura-comps",
+          "order": 44
+        },
+        {
+          "id": "s5-variaciones-de-titulo-ficcion",
+          "section": 5,
+          "subsection": "5.2 Título (+ subtítulo)",
+          "title": "Variaciones de título ficción",
+          "description": "Evocador + subtítulo que aclare Navidad cristiana / familia / 6–12 si el research lo pide. + (S2 E1M2B)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S2 E1M2B"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.6,
+          "effort_band": "lento",
+          "weight_id": "variaciones-titulo-ficcion",
+          "order": 45
+        },
+        {
+          "id": "s5-pulir-y-elegir",
+          "section": 5,
+          "subsection": "5.2 Título (+ subtítulo)",
+          "title": "Pulir y elegir",
+          "description": "Descanso 24–48 h; leer en voz alta; rúbrica curso; test 2–3 personas ajenas a la familia. (S2 E1M3) (S2 E1M4)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E1M3",
+            "S2 E1M4"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.9,
+          "effort_band": "lento",
+          "weight_id": "pulir-elegir-titulo",
+          "order": 46
+        },
+        {
+          "id": "s5-tres-criterios-en-miniatura",
+          "section": 5,
+          "subsection": "5.3 Portada",
+          "title": "Tres criterios en miniatura",
+          "description": "Captación en resultados; legible; comunica Navidad + infantil + cristiano en ~3 s. (S2 E2M1)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E2M1"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.0,
+          "effort_band": "medio",
+          "weight_id": "tres-criterios-miniatura",
+          "order": 47
+        },
+        {
+          "id": "s5-moodboard-3-5-si-1-2-no",
+          "section": 5,
+          "subsection": "5.3 Portada",
+          "title": "Moodboard 3–5 sí + 1–2 no",
+          "description": "Color, tipografía, ilustración (Sofía Lucas), composición vs comps. + (S2 E2M2)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "Sofía Lucas",
+            "S2 E2M2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.4,
+          "effort_band": "medio",
+          "weight_id": "moodboard-portada",
+          "order": 48
+        },
+        {
+          "id": "s5-brief-de-portada-tres-formatos",
+          "section": 5,
+          "subsection": "5.3 Portada",
+          "title": "Brief de portada (tres formatos)",
+          "description": "Textos exactos, tono, jerarquía; entregables ebook + wrap paperback + wrap hardcover con plantillas KDP reales. borrador · aprueba (S2 E2M2)",
+          "tags": [
+            "BOT",
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E2M2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.8,
+          "effort_band": "lento",
+          "weight_id": "brief-portada-tres-formatos",
+          "order": 49
+        },
+        {
+          "id": "s5-score-ponderado-de-la-portada-actual",
+          "section": 5,
+          "subsection": "5.3 Portada",
+          "title": "Score ponderado de la portada actual",
+          "description": "Legible ×3; comunica 3s ×3; resalta ×2; coherencia ×1; “¿la comprarías?” ×1. (S2 E2M2)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E2M2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.5,
+          "effort_band": "medio",
+          "weight_id": "score-ponderado-portada",
+          "order": 50
+        },
+        {
+          "id": "s5-licencias-y-creditos",
+          "section": 5,
+          "subsection": "5.3 Portada",
+          "title": "Licencias y créditos",
+          "description": "Conservar comprobantes; créditos Cristian+Julián (diseño) y Sofía Lucas (ilustración) correctos. (S2 E2M2)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E2M2"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.0,
+          "effort_band": "medio",
+          "weight_id": "licencias-creditos",
+          "order": 51
+        },
+        {
+          "id": "s5-embudo-ficcion-padres",
+          "section": 5,
+          "subsection": "5.4 Descripción + backend + categorías",
+          "title": "Embudo ficción (padres)",
+          "description": "Gancho → medio → ~8 viñetas → objeción → CTA (terminología Amazon.es). + borrador (S2 E3M1B) (S2 E3M2B)",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "S2 E3M1B",
+            "S2 E3M2B"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.0,
+          "effort_band": "lento",
+          "weight_id": "embudo-ficcion-padres",
+          "order": 52
+        },
+        {
+          "id": "s5-longitud-2-800-3-000-caracteres",
+          "section": 5,
+          "subsection": "5.4 Descripción + backend + categorías",
+          "title": "Longitud ~2.800–3.000 caracteres",
+          "description": "Margen bajo el límite KDP ~4.000 incl. HTML; bot cuenta. conteo · (S2 E3M2B)",
+          "tags": [
+            "BOT",
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E3M2B"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.7,
+          "effort_band": "medio",
+          "weight_id": "longitud-descripcion",
+          "order": 53
+        },
+        {
+          "id": "s5-html-de-impacto",
+          "section": 5,
+          "subsection": "5.4 Descripción + backend + categorías",
+          "title": "HTML de impacto",
+          "description": "Orden: gancho → viñetas → credibilidad → objeción → CTA; h4/b/ul/li; KW principal ~3–4× naturales. + (S2 E3M3)",
+          "tags": [
+            "BOT",
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E3M3"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.4,
+          "effort_band": "lento",
+          "weight_id": "html-impacto",
+          "order": 54
+        },
+        {
+          "id": "s5-no-editar-descripcion-en-author-central",
+          "section": 5,
+          "subsection": "5.4 Descripción + backend + categorías",
+          "title": "No editar descripción en Author Central",
+          "description": "Evita sobrescribir el HTML de KDP. (S2 E3M3)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E3M3"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.2,
+          "effort_band": "rapido",
+          "weight_id": "no-editar-author-central-desc",
+          "order": 55
+        },
+        {
+          "id": "s5-backend-keywords-hasta-7",
+          "section": 5,
+          "subsection": "5.4 Descripción + backend + categorías",
+          "title": "Backend keywords (hasta 7)",
+          "description": "Revisar las 7 actuales vs reverse/Word Cloud; no repetir título; candidatos bot + cupo si hace falta. candidatos · si aplica (S2) (S1 M4)",
+          "tags": [
+            "BOT",
+            "HUMANO",
+            "BOOKBEAM-CUPO"
+          ],
+          "cites": [
+            "S2",
+            "S1 M4"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.6,
+          "effort_band": "medio",
+          "weight_id": "backend-keywords",
+          "order": 56
+        },
+        {
+          "id": "s5-categorias-kdp-es",
+          "section": 5,
+          "subsection": "5.4 Descripción + backend + categorías",
+          "title": "Categorías KDP .es",
+          "description": "Validar las 3 rutas Kindle del intake y alinear print; elegir las que enseñe el curso / consola. (S2 E0) (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E0",
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.2,
+          "effort_band": "medio",
+          "weight_id": "categorias-kdp-es",
+          "order": 57
+        },
+        {
+          "id": "s5-qa-de-empaque",
+          "section": 5,
+          "subsection": "5.4 Descripción + backend + categorías",
+          "title": "QA de empaque",
+          "description": "Checklist coherencia título↔portada↔descripción↔avatar padres. checklist · go/no-go (S2 E0)",
+          "tags": [
+            "BOT",
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.6,
+          "effort_band": "medio",
+          "weight_id": "qa-empaque",
+          "order": 58
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "num": 6,
+      "title": "S3 — QC del contenido existente",
+      "intro": "El manuscrito existe (PDF 124 págs / Amazon 59). QC obligatorio. Reescritura estructural solo si falla el QC.",
+      "items": [
+        {
+          "id": "s6-definir-promesa-vs-entrega",
+          "section": 6,
+          "subsection": "6.1 Puerta de calidad",
+          "title": "Definir promesa vs entrega",
+          "description": "¿El PDF cumple la promesa del listing (familia, gratitud, nacimiento de Jesús)? (S3 L02)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S3 L02"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.0,
+          "effort_band": "medio",
+          "weight_id": "definir-promesa-vs-entrega",
+          "order": 59
+        },
+        {
+          "id": "s6-decidir-si-hace-falta-reescritura-ligera",
+          "section": 6,
+          "subsection": "6.1 Puerta de calidad",
+          "title": "Decidir si hace falta reescritura ligera",
+          "description": "Solo si hay fallos de estructura/flujo; si no, QC sin reescribir. (S3 L01) · reescribible condicional",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S3 L01"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.0,
+          "effort_band": "medio",
+          "weight_id": "decidir-reescritura-ligera",
+          "order": 60
+        },
+        {
+          "id": "s6-lectura-en-voz-alta-por-capitulos",
+          "section": 6,
+          "subsection": "6.2 QC (obligatorio)",
+          "title": "Lectura en voz alta / por capítulos",
+          "description": "Forma + contenido; anotar saltos, tono y promesa rota. (S3 L10)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S3 L10"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 4.0,
+          "effort_band": "lento",
+          "weight_id": "lectura-voz-alta",
+          "order": 61
+        },
+        {
+          "id": "s6-chequeo-de-plagio",
+          "section": 6,
+          "subsection": "6.2 QC (obligatorio)",
+          "title": "Chequeo de plagio",
+          "description": "Frases en Google / método del curso y/o herramienta; humano ejecuta. (S3 L11)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S3 L11"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.5,
+          "effort_band": "medio",
+          "weight_id": "chequeo-plagio",
+          "order": 62
+        },
+        {
+          "id": "s6-correccion-linguistica",
+          "section": 6,
+          "subsection": "6.2 QC (obligatorio)",
+          "title": "Corrección lingüística",
+          "description": "Ortografía, gramática, puntuación en español (LanguageTool u equiv.). o editor (S3 L12)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "LanguageTool u equiv.",
+            "S3 L12"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 3.2,
+          "effort_band": "lento",
+          "weight_id": "correccion-linguistica",
+          "order": 63
+        },
+        {
+          "id": "s6-edicion-de-fondo",
+          "section": 6,
+          "subsection": "6.2 QC (obligatorio)",
+          "title": "Edición de fondo",
+          "description": "Flujo, tono infantil cristiano, coherencia de capítulos (índice interior: 5 bloques + receta). (S3 L12)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S3 L12"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 3.7,
+          "effort_band": "lento",
+          "weight_id": "edicion-fondo",
+          "order": 64
+        },
+        {
+          "id": "s6-reconciliar-conteo-de-paginas",
+          "section": 6,
+          "subsection": "6.2 QC (obligatorio)",
+          "title": "Reconciliar conteo de páginas",
+          "description": "Entender 59 (Amazon) vs 124 (PDF); ajustar layout si hace falta antes de archivos finales. + nota (S0) / KDP",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [
+            "Amazon",
+            "PDF",
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.2,
+          "effort_band": "medio",
+          "weight_id": "reconciliar-conteo-paginas",
+          "order": 65
+        },
+        {
+          "id": "s6-pasadas-multiples-cierre-calidad",
+          "section": 6,
+          "subsection": "6.2 QC (obligatorio)",
+          "title": "Pasadas múltiples + cierre calidad",
+          "description": "Varias pasadas; listo para archivos KDP solo con checklist verde. (S3 L13)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S3 L13"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.6,
+          "effort_band": "lento",
+          "weight_id": "pasadas-multiples-cierre",
+          "order": 66
+        },
+        {
+          "id": "s6-na-plantilla-esquema-nf-completa",
+          "section": 6,
+          "subsection": "6.3 N/A en S3 para este título",
+          "title": "N/A · Plantilla esquema NF completa",
+          "description": "No reconstruir TOC de no-ficción. (S3 L04) · N/A",
+          "tags": [],
+          "cites": [
+            "S3 L04"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-plantilla-esquema-nf",
+          "order": 67
+        },
+        {
+          "id": "s6-na-delegacion-a-ghostwriter",
+          "section": 6,
+          "subsection": "6.3 N/A en S3 para este título",
+          "title": "N/A · Delegación a ghostwriter",
+          "description": "Familia mantiene autoría. (S3 L06–L09) · N/A",
+          "tags": [],
+          "cites": [
+            "S3 L06–L09"
+          ],
+          "na": true,
+          "placeholder": false,
+          "weight_pct": 0.0,
+          "effort_band": "na",
+          "weight_id": "na-delegacion-ghostwriter",
+          "order": 68
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "num": 7,
+      "title": "Publicación / archivos KDP (incluir tapa dura)",
+      "intro": "Gates humanos: subir, previsualizar, precios .es y publicar. El bot no publica.",
+      "items": [
+        {
+          "id": "s7-interior-final-por-formato",
+          "section": 7,
+          "subsection": null,
+          "title": "Interior final por formato",
+          "description": "PDF/ePub según requisitos KDP; tipografía y márgenes OK tras QC. (S0) + consola KDP",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.2,
+          "effort_band": "lento",
+          "weight_id": "interior-final-formato",
+          "order": 69
+        },
+        {
+          "id": "s7-portadas-por-formato-3",
+          "section": 7,
+          "subsection": null,
+          "title": "Portadas por formato (3)",
+          "description": "Ebook + wrap paperback + **wrap hardcover nuevo** (dimensiones KDP reales). (S2 E2M2) (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E2M2",
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 2.4,
+          "effort_band": "lento",
+          "weight_id": "portadas-tres-formatos",
+          "order": 70
+        },
+        {
+          "id": "s7-crear-editar-titulo-en-kdp-es",
+          "section": 7,
+          "subsection": null,
+          "title": "Crear/editar título en KDP (.es)",
+          "description": "Cuenta del papá; metadatos alineados al empaque S2 y a la decisión A/B/C.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.4,
+          "effort_band": "medio",
+          "weight_id": "crear-editar-titulo-kdp",
+          "order": 71
+        },
+        {
+          "id": "s7-pegar-descripcion-html",
+          "section": 7,
+          "subsection": null,
+          "title": "Pegar descripción HTML",
+          "description": "Desde editor KDP; nunca Author Central. (S2 E3M3)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E3M3"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.5,
+          "effort_band": "rapido",
+          "weight_id": "pegar-descripcion-html",
+          "order": 72
+        },
+        {
+          "id": "s7-backend-categorias-finales",
+          "section": 7,
+          "subsection": null,
+          "title": "Backend + categorías finales",
+          "description": "Los 7 campos y categorías acordadas post-research.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.8,
+          "effort_band": "medio",
+          "weight_id": "backend-categorias-finales",
+          "order": 73
+        },
+        {
+          "id": "s7-publicar-anadir-los-tres-formatos",
+          "section": 7,
+          "subsection": null,
+          "title": "Publicar / añadir los tres formatos",
+          "description": "Kindle + paperback + **hardcover** juntos con anclaje de precio. (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 3.0,
+          "effort_band": "lento",
+          "weight_id": "publicar-tres-formatos",
+          "order": 74
+        },
+        {
+          "id": "s7-previsualizador-kdp",
+          "section": 7,
+          "subsection": null,
+          "title": "Previsualizador KDP",
+          "description": "Muestra ebook + prueba de impresión paperback y hardcover.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.2,
+          "effort_band": "medio",
+          "weight_id": "previsualizador-kdp",
+          "order": 75
+        },
+        {
+          "id": "s7-precio-amazon-es-eur",
+          "section": 7,
+          "subsection": null,
+          "title": "Precio Amazon.es (EUR)",
+          "description": "Fijar anclaje con calculadora de regalías; dato de precio actual aún pendiente. (S0) (S1 M8)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0",
+            "S1 M8"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.2,
+          "effort_band": "medio",
+          "weight_id": "precio-amazon-es",
+          "order": 76
+        },
+        {
+          "id": "s7-kdp-select-ebook",
+          "section": 7,
+          "subsection": null,
+          "title": "KDP Select (ebook)",
+          "description": "Verificar si está activo; activar/renovar según decisión S0. (S0)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S0"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.4,
+          "effort_band": "rapido",
+          "weight_id": "kdp-select-ebook",
+          "order": 77
+        },
+        {
+          "id": "s7-enviar-a-revision-publicar",
+          "section": 7,
+          "subsection": null,
+          "title": "Enviar a revisión / publicar",
+          "description": "Solo humano; anotar fecha y ASINs (incl. nuevo hardcover) en la ficha.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 1.5,
+          "effort_band": "lento",
+          "weight_id": "enviar-revision-publicar",
+          "order": 78
+        },
+        {
+          "id": "s7-author-central-perfil-maripaz-becerra",
+          "section": 7,
+          "subsection": null,
+          "title": "Author Central (perfil Maripaz Becerra)",
+          "description": "Perfil con nombre real; **no** tocar la descripción del libro ahí. (S2 E3M3)",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [
+            "S2 E3M3"
+          ],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.3,
+          "effort_band": "rapido",
+          "weight_id": "author-central-perfil",
+          "order": 79
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "num": 8,
+      "title": "PLACEHOLDER — ventana Navidad 2026 (S4+ / Acelerador)",
+      "intro": "**PLACEHOLDER — no capacitado aún.** No inventar SOPs de ads ni métricas. Completar cuando Julián abra esos módulos. Sirve solo como recordatorio de la ventana estacional.",
+      "items": [
+        {
+          "id": "s8-ph-calendario-navidad-2026",
+          "section": 8,
+          "subsection": null,
+          "title": "PLACEHOLDER · Calendario Navidad 2026",
+          "description": "Soft/hard launch con lead time (ideal: listo meses antes de diciembre). · *sin cita de módulo capacitado*",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": true,
+          "weight_pct": 0.8,
+          "effort_band": "placeholder",
+          "weight_id": "ph-calendario-navidad-2026",
+          "order": 80
+        },
+        {
+          "id": "s8-ph-amazon-ads",
+          "section": 8,
+          "subsection": null,
+          "title": "PLACEHOLDER · Amazon Ads",
+          "description": "Estructura, pujas, ACoS/CTR con datos reales de cuenta cuando el curso lo enseñe. · *pendiente capacitación*",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": true,
+          "weight_pct": 1.0,
+          "effort_band": "placeholder",
+          "weight_id": "ph-amazon-ads",
+          "order": 81
+        },
+        {
+          "id": "s8-ph-resenas-early-eticas",
+          "section": 8,
+          "subsection": null,
+          "title": "PLACEHOLDER · Reseñas early (éticas)",
+          "description": "Solo métodos permitidos por Amazon; cero reseñas falsas (hoy hay 0). · *pendiente*",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": true,
+          "weight_pct": 0.8,
+          "effort_band": "placeholder",
+          "weight_id": "ph-resenas-early",
+          "order": 82
+        },
+        {
+          "id": "s8-ph-a-content",
+          "section": 8,
+          "subsection": null,
+          "title": "PLACEHOLDER · A+ Content",
+          "description": "Bloque visual bajo la descripción para la temporada. · *detalle pendiente*",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": true,
+          "weight_pct": 0.8,
+          "effort_band": "placeholder",
+          "weight_id": "ph-a-plus-content",
+          "order": 83
+        },
+        {
+          "id": "s8-ph-email-lista-acelerador",
+          "section": 8,
+          "subsection": null,
+          "title": "PLACEHOLDER · Email / lista / Acelerador",
+          "description": "Lead magnet si el curso lo desarrolla; bloque locked hasta indicación. · *Acelerador locked*",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": true,
+          "weight_pct": 0.6,
+          "effort_band": "placeholder",
+          "weight_id": "ph-email-lista-acelerador",
+          "order": 84
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "num": 9,
+      "title": "Cierre de Maripaz Navidad (antes de Charlotte)",
+      "intro": "",
+      "items": [
+        {
+          "id": "s9-ficha-actualizada",
+          "section": 9,
+          "subsection": null,
+          "title": "Ficha actualizada",
+          "description": "ASINs finales (incl. hardcover), URL .es, precios, decisión A/B/C, promesa final. +",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.8,
+          "effort_band": "medio",
+          "weight_id": "ficha-actualizada",
+          "order": 85
+        },
+        {
+          "id": "s9-checklist-archivado",
+          "section": 9,
+          "subsection": null,
+          "title": "Checklist archivado",
+          "description": "Copia marcada en Apple Notes / carpeta Editorial KDP.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.3,
+          "effort_band": "rapido",
+          "weight_id": "checklist-archivado",
+          "order": 86
+        },
+        {
+          "id": "s9-lecciones-aprendidas-5-bullets",
+          "section": 9,
+          "subsection": null,
+          "title": "Lecciones aprendidas (≤5 bullets)",
+          "description": "Nicho / empaque / QC / formatos para el siguiente título. + redactar",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.7,
+          "effort_band": "medio",
+          "weight_id": "lecciones-aprendidas",
+          "order": 87
+        },
+        {
+          "id": "s9-no-abrir-charlotte-hasta-cerrar-este",
+          "section": 9,
+          "subsection": null,
+          "title": "No abrir Charlotte hasta cerrar este",
+          "description": "«Maripaz y el regalo de Charlotte» queda fuera hasta que este checklist esté cerrado.",
+          "tags": [
+            "HUMANO"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.3,
+          "effort_band": "rapido",
+          "weight_id": "no-abrir-charlotte",
+          "order": 88
+        },
+        {
+          "id": "s9-duplicar-pipeline-para-el-siguiente",
+          "section": 9,
+          "subsection": null,
+          "title": "Duplicar pipeline para el siguiente",
+          "description": "Nueva ficha en blanco solo cuando Maripaz Navidad esté cerrado. +",
+          "tags": [
+            "HUMANO",
+            "BOT"
+          ],
+          "cites": [],
+          "na": false,
+          "placeholder": false,
+          "weight_pct": 0.4,
+          "effort_band": "rapido",
+          "weight_id": "duplicar-pipeline-siguiente",
+          "order": 89
+        }
+      ]
+    }
+  ]
+}

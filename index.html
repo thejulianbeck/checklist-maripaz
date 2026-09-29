@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a4d3e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Maripaz">
+  <meta name="description" content="Checklist editorial interactivo — Maripaz y la Navidad que Casi Desaparece">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Checklist Maripaz — Editorial KDP</title>
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="progress-bar" role="status" aria-live="polite">
+      <div class="progress-top">
+        <span id="progress-label">0 de 0 hechos</span>
+        <span class="progress-pct" id="progress-pct">0%</span>
+        <span class="sync-pill" id="sync-pill" title="Estado de sincronización">
+          <span class="sync-dot" aria-hidden="true"></span>
+          <span id="sync-text">Sincronizando…</span>
+        </span>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="eyebrow">Editorial KDP · Solo este título · Español</div>
+      <h1 id="meta-title">Maripaz y la Navidad que Casi Desaparece</h1>
+      <div class="hero-meta">
+        <div><strong>Tipo:</strong> <span id="meta-tipo"></span></div>
+        <div><strong>Autor:</strong> <span id="meta-autor"></span></div>
+        <div><strong>ASINs:</strong> <span id="meta-asins"></span></div>
+        <div><strong>ISBN:</strong> <span id="meta-isbn"></span></div>
+      </div>
+      <div class="meta-chips">
+        <span class="chip">Amazon.es</span>
+        <span class="chip">Navidad 2026</span>
+        <span class="chip">Decisión A/B/C</span>
+        <span class="chip" id="item-count-chip">89 ítems</span>
+      </div>
+    </header>
+
+    <details class="panel" id="panel-install">
+      <summary>Cómo añadir a inicio (Safari iPhone / iPad)</summary>
+      <div class="panel-body">
+        <p>Para usarlo como app en la pantalla de inicio (sin barra de Safari):</p>
+        <ol>
+          <li>Abre este enlace en <strong>Safari</strong> (no Chrome ni otro navegador).</li>
+          <li>Toca el botón <strong>Compartir</strong> <span aria-hidden="true">□↑</span> (abajo en iPhone, arriba en iPad).</li>
+          <li>Desplázate y elige <strong>Añadir a pantalla de inicio</strong>.</li>
+          <li>Confirma el nombre <em>Maripaz</em> y toca <strong>Añadir</strong>.</li>
+        </ol>
+        <p>La app funciona sin conexión (caché local) y sincroniza el progreso entre iPhone e iPad cuando hay internet.</p>
+      </div>
+    </details>
+
+    <details class="panel" id="panel-legend">
+      <summary>Cómo usar + leyenda de tags</summary>
+      <div class="panel-body">
+        <p>Sigue las fases <strong>en orden</strong> (0 → 9). Toca un ítem para marcarlo. Toca ▾ para ver la descripción y la cita del curso.</p>
+        <p><strong>N/A</strong> no cuenta en el porcentaje. <strong>PLACEHOLDER</strong> (sección 8) sí cuenta, pero aún no está capacitado — solo es recordatorio.</p>
+        <div class="legend">
+          <span class="tag tag-BOT">[BOT]</span>
+          <span>El bot prepara borrador, plantilla, conteo o plan.</span>
+        </div>
+        <div class="legend">
+          <span class="tag tag-HUMANO">[HUMANO]</span>
+          <span>Decisión o ejecución en cuentas/tools (Julián / familia).</span>
+        </div>
+        <div class="legend">
+          <span class="tag tag-BOOKBEAM-CUPO">[BOOKBEAM-CUPO]</span>
+          <span>Consume créditos BookBeam → Julián ejecuta; bot solo planifica.</span>
+        </div>
+      </div>
+    </details>
+
+    <main id="sections" aria-label="Checklist por secciones"></main>
+
+    <p class="footer-note">Editorial KDP · Checklist título Maripaz Navidad · reempaque + QC escrito · Navidad 2026</p>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
