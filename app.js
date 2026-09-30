@@ -42,10 +42,14 @@
   let applyingRemote = false;
 
   function toast(msg) {
+    if (!msg || !el.toast) return;
     el.toast.textContent = msg;
     el.toast.classList.add('show');
     clearTimeout(toast._t);
-    toast._t = setTimeout(() => el.toast.classList.remove('show'), 2800);
+    toast._t = setTimeout(() => {
+      el.toast.classList.remove('show');
+      el.toast.textContent = '';
+    }, 2800);
   }
 
   function setSync(status, label) {

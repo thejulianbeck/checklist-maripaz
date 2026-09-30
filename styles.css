@@ -524,10 +524,18 @@ a { color: var(--sage-deep); }
   font-weight: 700;
   box-shadow: var(--shadow);
   z-index: 50;
-  transition: transform var(--dur) var(--ease);
+  transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease), visibility var(--dur) var(--ease);
   max-width: calc(100vw - 2rem);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-.toast.show { transform: translateX(-50%) translateY(0); }
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 @media (min-width: 700px) {
   .app { padding-top: 1.35rem; }
